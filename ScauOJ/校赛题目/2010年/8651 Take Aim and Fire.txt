@@ -1,0 +1,66 @@
+8651 Take Aim and Fire
+
+时间限制:500MS  内存限制:65535K
+提交次数:129 通过次数:19
+
+题型: 编程题   语言: 无限制
+Description
+
+The exciting time is coming! The shooting competition will be held very soon. In the competition, there will be n participants, and each of them will shoot m bullets with their air rifles. The competition has some following rules. Of course, these rules have been simplified so they are different from an official shooting game.
+
+
+Figure 1
+
+1. As you see in the figure 1, there will be n targets. The 1st participant should shot the first target (from the left), the 2nd participant should shot the second target, and then the 3rd, 4th, 5th will follow the same way.
+
+2. As you see in the figure 2, the target is a square. What’s more, there are 4 concentric rings in the target. The participant will try their best to aim at the center of the target and then fire. All the centers of the rings are in the center of the square. If the bullet hit inside the most inner ring, the participant will get 5 score. If the bullet misses the first ring but it hits inside the second ring from the center, the participant
+
+will get 4 score. If the bullet misses both the first and second ring but it hits inside the third ring from the center, the participant will get 3 score. If the bullet misses the first ring, the second ring and the third ring but it hits inside the forth ring from the center, the participant will get 2 score. If the bullet does not hit inside any ring but it hits the target, the participant will get 1 score.
+
+3. The participant should aim at his own target only. If a participant shot others’ target and hit it, he will lose 3 score as a penalty.
+
+4. The final score of a participant is the sum of the scores he gets when his shot each bullet.
+
+The director of the competition wants to know the score of each participant as soon as the games finish. Because he does not know how to write a program at all, so he turns to you to finish this simple task.
+
+
+
+
+输入格式
+
+Each input data only contains one test case.
+
+The first line in the input file two integers n and m, represent the number of participants and the bullets that each of them will shot during the game.
+
+The second line contains 4 float point number: A, H, D1 and D2.
+
+A is the length of the target, and the target is a square.
+
+H is the height between the bottom of the target and the ground (x-axis).
+
+D1 is the distance between the left side of the target and the y-axis in the plane. Besides, D1 is also the distance between every two adjacent targets.
+
+D2 is the radius of the most inner ring (also mentioned as the first with 5 score) in the target. Besides, the second ring (4 score) has a radius of 2 * D2. The third ring (3 score) has a radius of 3 * D2. The forth ring (2 score) has a radius of 4 * D2.
+
+Then follow n lines, each line contains m pairs of float numbers, each pair number consist of two float number, x and y, represent the coordinate where the bullets hit. It is guaranteed that no bullet will hit the borderline of the ring or the edge of the target.
+
+
+
+输出格式
+
+For each participant, output his final score in one line in the order of input. That is say: output the final score of the first participant in the first line. Output the final score of the second in the second line, etc.
+
+
+
+输入样例
+
+2 4
+5 2 1 0.5
+1.1 2.1 3.5 4.5 3.5 2.1 3 4
+8.9 4.4 3.5 4.5 10 5 10.5 5.5
+
+
+输出样例
+
+11
+8

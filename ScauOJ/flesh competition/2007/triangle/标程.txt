@@ -1,0 +1,37 @@
+#include <stdio.h>
+
+void main()
+{
+    int n,a,i,j,p,q,x,y,temp,temp1,b[10],count=0;
+    scanf("%d",&n);
+    for(i=0;i<n;i++)
+    {
+        scanf("%d",&a);
+        temp=a*a;
+	count=0;
+        for(j=1;j<a;j++)
+        {
+            if(temp%j==0)
+            {
+                x=(temp/j+j)/2;
+                y=(temp/j-j)/2;
+                if(x*x-y*y==temp)
+                    printf("%d,%d\n",x,y);
+            }
+            for(q=j-1;q>=1;q--)
+            {
+                temp1=j*j+q*q;
+                if(temp1==temp)
+		{
+                    b[count++]=j;
+		    b[count++]=q;
+		}
+                else if(temp1<temp)
+                    break;
+            }
+        }
+	for(p=count-1;p>=0;p-=2)
+	    printf("%d,%d\n",b[p-1],b[p]);
+        if(i<n-1) printf("\n");
+    }
+}

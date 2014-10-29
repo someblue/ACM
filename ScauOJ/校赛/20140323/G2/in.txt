@@ -1,0 +1,17 @@
+abcabc
+a
+5
+Query
+Push_back b
+Query
+Push_front a
+Query
+
+aaaaa
+a
+5
+Query
+Push_back a
+Query
+Push_front a
+Query

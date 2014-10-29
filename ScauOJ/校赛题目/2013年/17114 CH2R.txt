@@ -1,0 +1,59 @@
+17114 CH2R
+
+时间限制:1000MS  内存限制:65535K
+提交次数:0 通过次数:0
+
+题型: 编程题   语言: 无限制
+Description
+
+Description:
+Sleepiforest is about to graduate. CH2R, which help him to find a job at Tencent, will be the last project he participates during college life. If you work out this problem, 
+Sleepiforest sincerely invites you to join this project. 
+Here comes the problem. CH2R is a research in the field of Language Understanding. We have some syntax words like VP(Verb Phrase), NP(Noun Phrase), ADJP(Adjective phrase) 
+in CH2R. One step of the system is to match a Syntax sequence A to some template sequences. 	
+You have four operations to do with A:
+1. Replace a syntax α in A with βby score SR(α) + SR(β). SR meas SCORE OF REPLACE whose result is always Negative.
+2. Add a syntax α to A with score SA(α) which is always Negative.
+3. Delete a Syntax α in A with score SD(α) which is always Negative.
+4. Do nothing with a syntax α and get SN(α) which is always Positive.
+
+Using the four operations above, sequence A can be transform into any template sequence B. Please calculate the HIGHEST score S of the transform. And the SIMILARITY 
+will be 100 * S / MAX_BS. MAX_BS is the highest probable score to get when transform B into B. 
+Yes! It’s a classical DP algorithm call Edit Distance but a bit more complex. SR、SA、SD、SN are functions. They have default return value DR、DA、DD、DN, but for some 
+special syntax they have special return value which will be given in Input.
+
+
+
+输入格式
+
+Cases end with EOF. Number of case is less than 50.
+For each case, the first line comes to the syntax sequence A. Sequence is separated by white space. Length of sequences are less than 10. Syntax word are shorter than 5.
+The second line will be a interage n --- the number of template sequences. 60 > N > 0
+The n lines following are the template syntax sequence with the same format as A.
+And then will be the last four line represent SR SA SD and SN.
+Each line will have a default return value first, then some syntax word and score pairs following. They are all separated by white space. The default value and scores are 
+all interage between -100 to 100.
+
+
+输出格式
+
+Print all the SIMILARITY with two decimal places in the input order.
+
+
+输入样例
+
+VP DT NP
+2
+VP DT NP SP
+ADJP NP VP
+-20 NP -25 SP -20 DT -20
+-40 NP -30 DT -15 SP -15
+-35
+50 SP 15 PU 15
+
+
+输出样例
+
+81.82
+-43.33
+

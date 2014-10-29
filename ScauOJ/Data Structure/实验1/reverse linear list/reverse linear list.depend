@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1386673421 source:e:\information\c program\scauoj\data structure\reverse linear list\main.cpp
+	<stdio.h>
+	<malloc.h>
+

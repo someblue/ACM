@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1410503343 source:e:\workspace\acm\hust\network\c\main.cpp
+	<vector>
+	<cstdio>
+	<cstring>
+	<queue>
+

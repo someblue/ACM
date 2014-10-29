@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1383651115 source:e:\information\c program\scauoj\flesh competition\2007\k equal\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<math.h>
+

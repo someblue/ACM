@@ -1,0 +1,42 @@
+17110 Divisible
+
+时间限制:1000MS  内存限制:65535K
+提交次数:0 通过次数:0
+
+题型: 编程题   语言: 无限制
+Description
+
+Given n + m integers, I1,I2,...,In,T1,T2,...,Tm, we want to know whether (I1*I2*...*In)%(T1*T2*...*Tm)= =0.
+
+
+
+
+输入格式
+
+The first line gives two integers n and m. 1<=n,m<=100
+
+The second line gives n integers I1 I2 ... In.
+
+The third line gives m integers T1 T2 ... Tn.
+
+1<=Ii, Ti<=231
+
+
+
+输出格式
+
+Satisfy (I1*I2*...*In)%(T1*T2*...*Tm)= =0, output "yes", otherwise output "no"
+
+
+
+输入样例
+
+2 3
+24 14
+2 7 3
+
+
+输出样例
+
+yes
+

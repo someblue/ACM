@@ -1,0 +1,78 @@
+10315 Machinarium
+
+时间限制:1000MS  内存限制:65535K
+提交次数:0 通过次数:0
+
+题型: 编程题   语言: 无限制
+Description
+
+Machinarium is a very interesting game which requests the player has high intelligence and good patience. CW is playing 
+this game now, but he is being trapped at the last mission, can you help him, please?
+
+
+In this level, CW will compete with the NPC in a building, which contains n+1 rooms from left to right, and one of the 
+room is target room. There is a door between each pair of adjacent rooms. Each door has one kind of color. Initially,
+ every door is closed when the game starts, and CW is in room 0 while NPC is in room n. CW and NPC alternate turns to
+ choose a color which hasn't been chosen to make the doors with this chosen color open. At this point, the player who 
+can go through these open doors and reach the target room firstly by walking(time of walking in the building won't be 
+added to the total time) wins this game. If both players reach the target room at the same time, the game ends in a draw.
+ The game continues until one of the players wins the game or both players get a draw. Each player must comply with the
+ following rules:
+1.	If there is a plan which can make you reach the target room earlier than your competitor, you should choose the
+ best plan to make the game end as early as possible, and this means the total number of chosen colors should be as 
+few as possible.
+2.	If you have to lose the game, you should leave the choose colors as many as possible for your competitor. 
+It means that the game will end as late as possible. What's more, it's your competitor aims that to minimize the total 
+number of chosen colors.
+3.	If you can just get a draw game at any case, you will choose a kind of color at random.
+
+
+
+
+输入格式
+
+The first line of input is an integer T (T <= 50), indicate the number of test cases. Each test contains two lines. 
+The first line is a string meaning the color of each door. The strings are represented by upper letter ‘A'  to‘P'.
+ Number of doors is between 2 and 50, including 2 and 50. The i-th character in string means the color of the door 
+between rooms i and i+1. The second line of input is an integer X to show the index of the target room.
+
+
+输出格式
+
+Each test case output one line contains one integer. If the game ends in a draw, output 0; otherwise, define Y as 
+the total number of chosen colors. If CW wins the game, output Y, else output –Y.
+
+
+输入样例
+
+6
+ABCD
+2
+ABCC
+2
+ABABAB
+3
+ABAPDCAA
+5
+MOCFDCE
+3
+ABCCDE
+3
+
+
+输出样例
+
+3
+-2
+0
+-4
+5
+0
+
+
+提示
+
+In the first case, there are 5 rooms, with the target room in the middle of rooms; CW will win after he chooses color A and B.
+In the second case, NPC will win by choosing color C.
+In the third case, both players will be able to reach target room when color A and B have been chosen.
+

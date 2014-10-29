@@ -1,0 +1,51 @@
+8654 Stand on Top of Mountain
+
+该题有题解
+
+时间限制:500MS  内存限制:65535K
+提交次数:69 通过次数:15
+
+题型: 编程题   语言: 无限制
+Description
+
+More and more foreigners are coming Guangzhou city. They are desired for the grand opening of the Asian Games and the wonderful sports events. Of course, most of them will also climb the Baiyun Mountain to see the modern city, Guangzhou.
+
+On the top of the mountain, many other mountain tops can be seen. The problem comes up. On which mountain top you can see most other ones?
+
+To simple the problem, we suppose that all the mountain tops are in a line and ignore their shape. Figure 1 is an example.
+
+
+Figure 1
+
+There are 6 mountain tops which number from 1 to 6. They locate respectively at 2, 3, 7, 6, 4, and 1. Their heights respectively are 2, 4, 8, 7, 3, and 2. On the no.1 mountain top we can see 2 other mountain tops, which are no.2 and no.6, but cannot see no.3, no.4, and no.5, because they are obstructed by mountain top no.2. On the no.2 mountain top we can see 4. On the no.3 mountain top we can see 1. On the no.4 mountain top we can see 3. On the no.5 mountain top we can see 2. On the no.6 mountain top we can see 2. So the no.2 mountain top is the answer.
+
+
+
+
+输入格式
+
+The first line is an integer N(1≤N≤1000) which means the number of mountain tops. The next N lines are the locations and heights of the N mountain tops, one mountain top per line. Each line has two integers. The first is the location and the second is the height. The both are between 1 and 32768.
+
+
+
+输出格式
+
+Find the mountain top mention above, output its number and how-many mountain tops can be seen. The two numbers are separated by a space. If there are many mountain tops satisfied, output the one which number is smallest.
+
+
+
+输入样例
+
+6
+2 2
+3 4
+7 8
+6 7
+4 3
+1 2
+
+
+输出样例
+
+2 4
+

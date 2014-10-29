@@ -1,0 +1,44 @@
+17115 ooxx numbers
+
+时间限制:1000MS  内存限制:65535K
+提交次数:0 通过次数:0
+
+题型: 编程题   语言: 无限制
+Description
+
+a number A called oo number of a number B if the sum of all As factor is the number B.
+(A,B) is a pair of ooxx numbers if A is the oo number of B and B is the oo number of A.
+Now i want to find how many pairs of ooxx numbers in [1,n]
+
+
+
+输入格式
+
+there are many cases in the input.
+for each line there is a number n. ( 1 <= n <= 5000000 )
+
+
+输出格式
+
+for each n, output the numbers of pairs of ooxx numbers in [1,n] 
+
+
+输入样例
+
+300
+1300
+
+
+输出样例
+
+1
+2
+
+
+提示
+
+hits 
+220=1+2+4+71+142=284,
+284=1+2+4+5+10+11+20+22+44+55+110=220。
+220 and 280 is a pair of ooxx numbers.
+

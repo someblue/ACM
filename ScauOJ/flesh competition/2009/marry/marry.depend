@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1386572123 source:e:\information\c program\scauoj\flesh competition\2009\marry\main.cpp
+	<iostream>
+	<cstdio>
+	<cstring>
+

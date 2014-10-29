@@ -1,0 +1,81 @@
+10307 Trees and Numbers
+
+该题有题解
+
+时间限制:1000MS  内存限制:65535K
+提交次数:10 通过次数:9
+
+题型: 编程题   语言: 无限制
+Description
+
+
+
+Can you find the rule of these equations?
+Let me explain for you. There are only 3 definitions:
+Every Tree represent a prime integer (prime integer is an integer that can only divide by 1 and itself. e.g. 2,3,5,7 etc.).
+A forest (one or more trees) represents a integer which is the product of trees.
+If we add a root for a forest (Let n to be the integer it represent) to build a tree, then this new tree represent the n-th prime integer.
+For example , 2 is the first prime integer , we use one node to represent it , and 3 is the second , so we add a root to 2 , it become 3. 
+Then add a root to 3 , we get the third prime ——5. If we add a root to 5? We get the fifth prime, which is 11. Also, while combine 3 and 5 ,
+ we will get 15 since 15=3*5 . That is why 11 and 15 represent that in the figure.
+
+
+Figure 2: 15=3*5 and 23 is the 9-th prime integer.
+Now, give you a tree, can you find the integer it represents?
+
+
+
+输入格式
+
+The Input will contain multiple cases.
+The first line contains an integer T, the number of test cases.
+Then T cases follow.
+The first line of each case, is a integer n(n>0) , that represents the number of nodes in the forest.
+After that, there will be one line contains n integers. The i-th integer ai means that the father node of 
+the i-th node is ai (0<=ai<=n) . And if ai=0, it just means that i-th node is a root of tree (0 is not a node).
+You can assume that all this can exactly build a forest, and cases like:
+2
+2 1
+is invalid and will not appear.
+
+
+输出格式
+
+For each case, output the answer in one line.
+You may assume that all the answers are less than 50000.
+
+
+输入样例
+
+
+7
+1
+0
+4
+0 1 2 3
+5
+0 1 0 3 4
+5
+0 1 1 1 2
+6
+0 0 0 3 4 4
+7
+0 0 5 2 2 4 1
+6
+0 1 1 1 1 1
+
+
+输出样例
+
+2
+11
+15
+37
+68
+69
+131
+
+
+提示
+
+The 2-7th sample is in the figure 1.

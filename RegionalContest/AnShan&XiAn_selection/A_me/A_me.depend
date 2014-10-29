@@ -1,0 +1,10 @@
+# depslib dependency file v1.0
+1411702973 source:e:\workspace\acm\ÇøÓòÈü\anshan&xian_selection\a_me\main.cpp
+	<iostream>
+	<cstdio>
+	<cstring>
+	<algorithm>
+	<vector>
+	<utility>
+	<queue>
+

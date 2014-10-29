@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1395324891 source:e:\information\c program\oj\scauoj\data structure\สตั้4\8607\main.cpp
+	<queue>
+	"stdio.h"
+	"malloc.h"
+

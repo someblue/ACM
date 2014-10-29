@@ -1,0 +1,57 @@
+8657 How Many Ways？
+
+时间限制:500MS  内存限制:65535K
+提交次数:85 通过次数:23
+
+题型: 编程题   语言: 无限制
+Description
+
+You live in a small well-planned rectangular town. The size of the central area of the town is H kilometers from South-to-North and W kilometers from West-to-East. The central area is divided into HW unit blocks, each of size 1×1 km2. There are H + 1 streets going in the West to East direction, and there are W + 1 avenue going in the North to South direction. The central area can be seen as a rectangle on the plane, as shown below.
+
+
+Figure 1. The central area for a town where H = 3, and W = 6.
+
+ 
+
+We can identify each intersection by its co-ordinate on the plane. For example, on the Figure above the bottom-left corner is intersection (0, 0), and the top-right corner is intersection (6, 3). Your house is at the bottom-left corner (i.e., intersection (0, 0)) and you want to go to the university at the top-right corner (i.e., intersection (W, H )). Moreover, you only want to go to the university with wasting any efforts; therefore, you only want to walk from West-to-East and South-to-North directions. Walking this way, in the example above there are   ways to reach the university.
+
+You want to go to the university. Things get more complicated if the city blocks parts of intersections to do some cleaning. The blocking intersections are such a way that it is not possible to cross. You still want to go to the university using the same West-to-East and South-to-North strategy. You want to find out how many ways you can reach the university by only walking West-to-East and South-to-North.
+
+
+
+
+输入格式
+
+The first line contains an integer T, the number of test cases (1 ≤ T≤ 1000). Each test case is in the following format.
+
+The first line of each test case contains 3 integers: W, H, and K (1≤W≤1000; 1≤H≤1000; 0≤K≤10). W and H specify the size of the central area. K denotes the number of blocked intersections.
+
+The next K lines describe the information of blocked intersections. More specifically, line 1+i, for 1<i<K, contains two integer: wi, hi (0≤wi≤W, 0≤hi≤H). The intersection (wi, hi) are blocked.
+
+
+
+输出格式
+
+For each test case, your program must output the number of ways to go to the university on a separate line. Because the answer may be quite large, you should give answer mod 19992010.
+
+
+
+输入样例
+
+3
+2 2 1
+1 1
+6 3 2
+1 1
+2 2
+9 6 3
+1 2
+2 1
+4 4
+
+
+输出样例
+
+2
+32
+934

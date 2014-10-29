@@ -1,0 +1,46 @@
+
+10313 Farjuli sequence
+
+时间限制:1000MS  内存限制:65535K
+提交次数:0 通过次数:0
+
+题型: 编程题   语言: 无限制
+Description
+
+Let us define a Farjuli sequence in the following way:
+If a sequence of n integers P[1]... P[i]... P[n], which satisfied p[i + 1] % n = (p [i] + 1) % n, (1 < = i < n), we say this sequence is a Farjuli sequence.
+After some research, Yuan find an interesting way to play with the sequence: by swapping adjacent numbers, he wants to make the original sequence become a farjuli sequence.
+In particular, for some reason, Yuan don't like the number 1 appears in some specific places. For example, if Yuan don't want that the number 1 appears in the second position, then the sequence (n 1 2 3.... n-1) is not a farjuli sequence which Yuan likes.
+Now, Yuan wonder what is the minimum number of swap to make the sequence into a farjuli  sequence which Yuan likes?
+
+
+
+输入格式
+
+Line 1: contains two number n and m. (n<=100000)
+n is the number of integers in the sequence and m means the number of position where Yuan don't like the number 1 appears. 
+Line 2: contains n different integers between 1 and n.
+Line 3: contains m different integers between 1 and n.(Be sure m<n)
+The end of input is indicated by a line in which n=m = -1.
+
+
+输出格式
+
+The output should contain the minimum number of swap, one per line.
+
+
+输入样例
+
+4 1
+1 2 3 4
+1
+4 0
+4 1 2 3
+-1 -1
+
+
+输出样例
+
+3
+0
+

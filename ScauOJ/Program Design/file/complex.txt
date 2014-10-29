@@ -1,0 +1,104 @@
+在当前目录中存在文件名为"case1.in"（其中case后为数字1，不是字母l，写错提交后会判错）的文本文件，
+其内容为一篇英文文章（以EOF作为结束标志）。现要求读取该文本文件内容，统计文章中每个单词出现的次数，
+并输出出现次数最多的前5个单词及其出现次数（按出现次数由多到少的顺序输出，次数相同时按字典顺序输出，
+不足5个单词时，按序输出全部单词）。程序中注意如下细节：
+（1）	空格、标点符号与回车符起到分隔单词的作用。
+（2）	文章一行的末尾可能有连字符，出现连字符时，该行最末的字符串与下行最先出现的字符串构一个单词；
+（3）	名词缩写算一个单词；
+（4）	数字不算单词；
+（5）	单词不区分大小写；
+（6）	输出时单词全使用小写；
+
+#include "stdio.h" 
+#include "math.h" 
+#include "string.h" 
+#include "stdlib.h" 
+
+_______________________ 
+
+main() 
+{ 
+         _______________________ 
+} 
+
+输入格式
+
+文件case1.in中一篇英文文章，包含多段文字，单词数不超过10000，每个单词不超过20个字符
+
+
+输出格式
+
+按题意输出答案
+
+
+输入样例
+
+（如case1.in内容如下） 
+I am a student. My school is SCAU. It is a beau-
+tiful university. I like it.
+
+
+输出样例
+
+a 2
+i 2
+is 2
+it 2
+am 1
+
+标准输入数据:
+I am a student. -1 = 1 - 2. q=a-m. z = i - w. My school is SCAU. It is a beau-
+tiful university. tf-tf-tf-tf, 123 123. I like it.
+
+标准输出答案:
+   1|t 4
+   2|a 3
+   3|i 3
+   4|is 2
+   5|it 2
+
+
+你的错误输出结果:
+   1|a 3
+   2|i 3
+   3| 2
+   4|is 2
+   5|it 2
+
+
+cygwin warning:
+  MS-DOS style path detected: \20131015_025342_2045\Main.cc
+  Preferred POSIX equivalent is: //20131015_025342_2045/Main.cc
+  CYGWIN environment variable option "nodosfilewarning" turns off this warning.
+  Consult the user's guide for more details about POSIX paths:
+    http://cygwin.com/cygwin-ug-net/using.html#using-pathnames
+\20131015_025342_2045\Main.cc: In function `int input(FILE*)':
+\20131015_025342_2045\Main.cc:25: error: 'struct __sFILE64' has no member named '_ptr'
+\20131015_025342_2045\Main.cc:28: error: 'struct __sFILE64' has no member named '_ptr'
+
+测试数据用例 No.2
+
+标准输入数据:
+I am a student. My school is SCAU. It is a beau-
+tiful university. I like it.
+I am a student. My school is SCAU. It is a i-
+s university. I like it.
+1 2 3 4 5 6 7 8 9
+12 12 12 12
+II I
+
+
+标准输出答案:
+   1|i 5
+   2|is 5
+   3|a 4
+   4|it 4
+   5|am 2
+
+
+你的错误输出结果:
+   1|i 6
+   2|a 4
+   3|is 4
+   4|it 4
+   5|am 2

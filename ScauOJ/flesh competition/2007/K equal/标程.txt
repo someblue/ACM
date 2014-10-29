@@ -1,0 +1,23 @@
+/*
+代码提供者Checkie
+*/
+#include "stdio.h"
+
+int main()
+{
+    int k, m, n, a[2010]={0}, i, t;
+    scanf("%d", &k);
+    if(k>=1000) t=k, m=1;
+    else
+    {   t=k, m=1;
+        while(t<1000) t*=k, m++;
+    }
+    while(1)
+    {
+	t=t%1000;
+        if(a[t]>0) break;
+        a[t]=m++;
+        t*=k;
+    }
+    printf("%d\n", a[t]+m);
+}

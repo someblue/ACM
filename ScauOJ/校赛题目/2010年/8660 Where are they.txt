@@ -1,0 +1,68 @@
+8660 Where are they
+
+时间限制:500MS  内存限制:65535K
+提交次数:19 通过次数:9
+
+题型: 编程题   语言: 无限制
+Description
+
+Asian Games has begun, and the ants also go to watch their favorite match. But because not all the matches start at the same time, they just go to the gymnasium when theirs begin. But to the gymnasium, there is one way and what’s worse the way only can occupy one ant.
+
+Normally dut to the lackness of felling direction , the ants walk forward and only when one meet anther, the two turn back and walk continue. They walk in a constant speed of 1m/s. What more, as the narrow street, they have to use 1s to turn their body.
+
+Given the positions of all the ants that the distant from their home and the direction of to the gym or home and the time T, please find out the positions of them at that time.
+
+For example , if there 3 ants A,B,C in the positions 1,2,6 in the beginning from home, and the home’s door’s distant is 0.And their directions are to gym(right),to house(left),house(left). After time 1, ant A and ant B meet each other ,ant A turns to left ,and ant B turns to right. and then at the positions 1 2,after time 3 ant 2 and ant 3 meet at the positions 3,4 .ant 1 get against into home.
+
+In this problem, all the ants have 1m/s speed. And turning use 1s.All the ants positions in the input has been sort by their distant. The most left is the 0th ant, the second one is the 1th ant ..Etc..  And no two ants stay at the same position in the input.
+
+
+
+
+输入格式
+
+The first line gives n (1<=n<=1000), the number of ants. The second line gives the street’s length L (1<=L<=100,000,000) .Then the time T (1<=T<=1,000,000).Then there are n lines , each line has two number, the ants positions and the direction, 0 for to house and 1 for to gym. All the positions have been sorted.
+
+
+
+输出格式
+
+The ith line of one case is the ith ant’s position after time T. If the ant is enter the home (not the door or the distant become negative from home) or they enter the gym (the distant from the house is bigger than the street), you should output ‘out’.
+
+
+
+输入样例
+
+3
+10
+4
+1 1
+2 0
+6 0
+
+
+输出样例
+
+out
+2
+5
+
+
+提示
+
+sample 2:
+input:
+4
+100
+5
+1 1
+4 1
+7 0
+10 0
+
+output:
+2
+5
+6
+9
+

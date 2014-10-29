@@ -1,0 +1,53 @@
+17116 Worm
+
+时间限制:1000MS  内存限制:65535K
+提交次数:0 通过次数:0
+
+题型: 编程题   语言: 无限制
+Description
+
+There is a worm with n segments.Each segment is 0 or 1 , while 0 means perfect and 1 means imperfect.A perfect worm is a worm like 000…0 , contains n zeros.
+You can change the worm by removing its rightmost segment , then it will grow a 0 or 1 on the leftmost by the follow rules:
+1.	If the rightmost segment is 1 , then you can choose the new leftmost segment to be 0 or to be 1.
+2.	If the rightmost segment is 0 , then the new leftmost segment will be generated random.
+I want to change the worm to perfect worm, and I find a way to make it perfect in limited moves:
+In every step , take n moves flow the following rule :
+For each 1 on the right most, if there are some 0s have been changed to 1s, then grows 1 on the leftmost. Otherwise, grows 0 on the leftmost.
+Please READ THE HINT for more details.
+Now give you a worm , could you tell me the expection steps of making this worm become perfect?
+
+
+
+输入格式
+
+The Input will contain mutiply cases.
+The first line contains an integer T(T<=10000), the number of test cases.
+Then T cases follow.
+For each case , there is a string only contains 0 and 1 , that represents the worm.
+The length of the worm is not more than 10.
+
+
+输出格式
+
+For each case , output a real number by 5 decimal places of precision , representing the expection steps of make this worm into a perfect worm , 
+
+
+输入样例
+
+2
+01
+110
+
+
+输出样例
+
+1.75000
+1.50000
+
+
+提示
+
+In case 1, For the first step , the worm will turn into 10(50% probability, and alought after the first move it will become 00, next move must be done, 
+and continue with the next step),  or turn into 11(50% probability).
+In case 2, For the first step , if the worm turn into 111 (50% probability) , take 1 more step to 000 . If it turn into 000(also has 50% probability), 
+it became perfect already. So the answer is 50%*2 + 50%*1 = 1.5

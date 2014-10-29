@@ -1,0 +1,53 @@
+10328 Cards
+
+时间限制:1000MS  内存限制:65535K
+提交次数:0 通过次数:0
+
+题型: 编程题   语言: 无限制
+Description
+
+Adam has a fancy for numbers. Once he found a batch of empty paper cards in his drawer, wrote random numbers on both sides of each 
+card and thought of the following puzzle: what smallest possible value can be obtained by putting all cards in an arbitrary order
+ (and upturned if necessary) to the expression of the following form:
+
+[] - [] + [] - [] + [] - [] + ... - []
+
+After a while Adam came up with a solution. Could you do that too? Write a program to solve the puzzle described above.
+
+
+
+输入格式
+
+The first line contains the number of cards N (2 ≤N ≤100,000, N is an even integer). Each of the following N lines 
+contains two integers ai and bi (-2000 ≤ ai, bi ≤ 2000; i = 1…N). These are the numbers written on separate sides of the i-th card.
+
+
+输出格式
+
+The output file name is CARDS.OUT. The first and the only line should contain the minimal value that can be obtained 
+by putting all the cards to the expression as described above.
+
+
+输入样例
+
+10
+70 70
+62 73
+81 65
+59 77
+99 40
+35 88
+80 57
+76 67
+85 57
+53 96
+
+
+输出样例
+
+-155
+
+
+提示
+
+62 - 70 + 59 - 81 + 40 – 76 + 35 – 85 + 57 - 96 = -155

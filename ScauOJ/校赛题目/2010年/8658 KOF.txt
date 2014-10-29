@@ -1,0 +1,61 @@
+8658 KOF
+
+时间限制:500MS  内存限制:65535K
+提交次数:71 通过次数:19
+
+题型: 编程题   语言: 无限制
+Description
+
+Baze is crazy about the game-KOF97 recently and he keeps practicing it every day. The game has 7 kinds of keys: left, right, up, down, A, B, C and D. Different combinations of keys represent different movements of the character in the game. Baze has a list of such combinations of keys, and each movement has an attacking point. He finds that sometimes when he wants to make the same set of movements and hits the keys in the same way, the character acts differently. Given a string of the combinations of keys he hits, you are asked to determine whether this string can represent more than one set of movements.
+
+
+
+
+输入格式
+
+The first line contains two numbers n, m (n<=200,m<=10).
+
+Next n lines contain strings of characters (formed by left, right, up, down, A, B, C and D) which each represent one movement, after each string there is an integer representing the attacking point.
+
+Next m lines contain strings of characters (formed by left, right, up, down, A, B, C and D) which each represent the keys that Baze hits.
+
+The length of each string is less than 200.
+
+
+
+输出格式
+
+The output includes m lines.
+
+If the keys that Baze hits represent only one set of movement, output YES and the attacking point Baze gets. Otherwise, output NO.
+
+
+
+输入样例
+
+3 2
+leftrightupAC 1
+ACAC 2
+AC 3
+leftrightupAC
+ACACACACACACACACACACACACACACACACACACACACACACACAC
+
+
+输出样例
+
+YES 1
+NO
+
+
+提示
+
+input:
+2 1
+ab 1
+cd 2
+abcd
+output:
+YES 3
+
+a set of movements means one or more strings in the list.
+

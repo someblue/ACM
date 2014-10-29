@@ -1,0 +1,40 @@
+10319 How Many Parallelograms
+
+时间限制:1000MS  内存限制:65535K
+提交次数:0 通过次数:0
+
+题型: 编程题   语言: 无限制
+Description
+
+There are n distinct points in the plane, given by their integer coordinates. Find the number of parallelograms whose vertices 
+lie on these points. In other words, find the number of 4-element subsets of these points that can be written as {A, B, C, D} 
+such that AB || CD, and BC || AD. You may assume that No four points are in a straight line.
+
+
+
+输入格式
+
+The first line contains an integer n (1 <= n <= 1000). Each of the next n lines, contains 2 space-separated integers x and y 
+(the coordinates of a point) with magnitude (absolute value) of no more than 1000000000.
+
+
+输出格式
+
+Output the number of the parallelograms as described above.
+
+
+输入样例
+
+7
+-2 -1
+8 9
+5 7
+1 1
+4 8
+2 0
+9 8
+
+
+输出样例
+
+6

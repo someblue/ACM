@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1385123150 source:e:\information\c program\scauoj\doeveryday\1121-sort divisor\main.cpp
+	<iostream>
+	<cstring>
+	<cstdio>
+

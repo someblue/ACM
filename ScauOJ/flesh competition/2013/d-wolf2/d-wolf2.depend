@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1388494243 source:e:\information\c program\scauoj\flesh competition\2013\d-wolf2\main.cpp
+	<iostream>
+	<cstdio>
+	<cstring>
+

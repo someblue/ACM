@@ -1,0 +1,70 @@
+10308 How much area？
+
+时间限制:1000MS  内存限制:65535K
+提交次数:46 通过次数:7
+
+题型: 编程题   语言: 无限制
+Description
+
+There is a curve (f(x)) in the rectangular coordinates (Figure 1). We want to know how much area among the four lines 
+(the curve f(x) and three straight lines x=X1, x=X2, y=0). 
+
+
+
+
+Figure 1.  The rectangular coordinates
+The function f(x) is defined as followed:
+
+
+
+(1)
+For example, if X1=1 and X2=2, it is our task to compute the areas of black region.
+
+
+
+
+Figure 2. the areas of black region
+
+
+
+输入格式
+
+The first line contains an integer T, the number of test cases (1 < T <= 1000). Each test case is in the following format.
+Every line has one test case and each test case contains 2 real numbers: X1, and X2 ( ). 
+
+
+输出格式
+
+For each test case, your program must output the approximate value (rounding-off method) of area. We request keep 4 
+decimal places. For example, if the area is 0.1234506789…, please output the approximate value 0.1235; if the area
+ is 0.1234499999…, please output the approximate value 0.1234.
+
+
+输入样例
+
+6
+0.0000 1.0000
+0.0000 2.0000
+0.0000 3.0000
+0.0000 3.1415
+1.0000 2.0000
+1.0000 3.0000
+
+
+输出样例
+
+0.9461
+1.6054
+1.8487
+1.8519
+0.6593
+0.9026
+
+
+提示
+
+
+
+If you don't know how to output a approximate, just printf(“%.4f\n”,answer);.
+We strongly recommended you to choose a proper value of n. Too big will get Time Limit Exceed And too small will 
+get Wrong Answer in this problem.

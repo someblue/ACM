@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1385601665 source:e:\information\c program\scauoj\Ð£Èü\global warming\main.cpp
+	<iostream>
+	<cstdio>
+	<cstring>
+	<algorithm>
+

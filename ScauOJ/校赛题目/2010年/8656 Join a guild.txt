@@ -1,0 +1,69 @@
+8656 Join a guild
+
+时间限制:500MS  内存限制:65535K
+提交次数:30 通过次数:16
+
+题型: 编程题   语言: 无限制
+Description
+
+Almost every MMORPG(Massively Multiplayer Online Role-Playing Game) has a guild(公会) system. Every player can join one guild, and every guild can contain many players. Now you are designing a guild request system. Assume letter is player. Number is guild. Give you some joining event and request about a player or a guild. Your system tells me which guild the player belongs to or lists the guild’s member.
+
+
+
+
+输入格式
+
+The first line of the input is an integer n (1<=n<=5000), means the total operation.
+
+There are only two kind of operation which format like “J p g” and “R q”.
+
+(0<=g<=9), (a<=p<=z)
+
+
+
+输出格式
+
+The operation begins with “J” means the play “p” join the guild “g”. This operation has no output.
+
+The operation begins with “R” means the request arguments is “q”.
+
+If “q” is an integer, your system should list the guild-“q”‘s member in lexicographic order. If nobody in guild-“q” then output “empty”.
+
+If “q” is a letter, your system should output the guild id which the player-“q” belongs to.
+
+If the player didn’t join any guild, output “solo”.
+
+
+
+输入样例
+
+15
+J a 1
+R c
+R 2
+J a 2
+J b 2
+R a
+R b
+R 1
+R 2
+J c 3
+J b 3
+J c 3
+R b
+R 3
+R 2
+
+
+输出样例
+
+solo
+empty
+2
+2
+empty
+ab
+3
+bc
+a
+

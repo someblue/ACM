@@ -1,0 +1,76 @@
+8614 素数
+时间限制:500MS  内存限制:1000K
+提交次数:662 通过次数:130 
+
+题型: 编程题   语言: 无限制
+
+
+
+Description
+数学对于计算机学是很重要的，大一的高数就曾经（或即将）令一批又一批人饮恨。这里就是一个数学问题，当然，它不需要用到高深的高数知识。
+给出n（1<=n<=100000），问1到n之间有几个素数。 
+
+
+
+输入格式
+第1行，1个整数T（T<=100000），表示共有T组测试数据
+第2---第T+1行，每行1个整数，表示测试数据n 
+
+
+输出格式
+对于每个测试数据，输出1行，每行1个数，表示1到n之间的素数个数
+
+
+
+输入样例
+5
+1
+2
+100
+1000
+5000
+
+
+
+
+
+输出样例
+0
+1
+25
+168
+669
+
+#include<stdio.h>
+#include<math.h>
+#define max 100000
+int main()
+{
+    int T,a[max],b[max];
+    int i,j,k,count=0;
+    scanf("%d",&T);
+    for(i=0;i<T;i++)
+      scanf("%d",&a[i]);
+
+    //素数表
+    k=0;
+    for(i=2;i<=max;i++){
+      for(j=2;j<=sqrt(i);j++)
+         if(i%j==0)  break;
+      if(j>sqrt(i)) {b[k]=i;k++;}
+    }
+
+    //判断有多少个素数
+    for(i=0;i<T;i++){
+      for(j=0;j<k;j++){
+        if(a[i]>b[j]) continue;
+        if(a[i]<b[j]) {count=j;break;}
+        if(a[i]==b[j]) {count=j+1;break;}
+      }
+      if(a[i]==1) count=0;
+      printf("%d\n",count);
+      count=0;
+    }
+    return 0;
+}
+

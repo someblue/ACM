@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1394674208 source:e:\information\c program\scauoj\algorithm\charter 1\9683\main.cpp
+	<iostream>
+	<cstring>
+	<cstdio>
+

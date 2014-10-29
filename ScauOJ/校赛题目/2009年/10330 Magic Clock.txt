@@ -1,0 +1,44 @@
+10330 Magic Clock
+
+时间限制:1000MS  内存限制:65535K
+提交次数:7 通过次数:3
+
+题型: 编程题   语言: 无限制
+Description
+
+Oyy found it interesting that the hour hand and the minute hand overlap each other.So he make a Magic Clock, the hour hand runs 1/n lap 
+when the minute hand runs one lap. He also knows that the bigger of n, the higher frequency of hour hand and minute hand's meetion. 
+Even so,he wants to know all the exact position that the hands overlap each other.Now,n is fixed, Assumed that 1/n round is a unit 
+length. Can you find out all the position of the two hands'meetion?
+
+
+
+输入格式
+
+The input consists of T test cases. T is given in the first line of the input file.
+Each test case begins with only one line containing an integer n , (2 <= n <= 100)as mentioned above.
+
+
+输出格式
+
+For each testcase, outputs should be set in one line, including several floating-point numbers to show the position of two hands' meetion.
+The output should be listed in the ascending order. Each meeting position should be printed only once. Round up to the second decimal 
+point in your answer.
+
+
+输入样例
+
+2
+3
+4
+
+
+输出样例
+
+0.00 1.50
+0.00 1.33 2.67
+
+
+提示
+
+请用VC提交，以确保四舍五入的精度与答案一致

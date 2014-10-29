@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1393573266 source:e:\information\c program\scauoj\algorithm\stl\ugly number\main.cpp
+	<iostream>
+	<cstdio>
+	<cstring>
+

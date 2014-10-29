@@ -1,0 +1,45 @@
+8652 Fast Typing
+
+时间限制:500MS  内存限制:65535K
+提交次数:11 通过次数:7
+
+题型: 编程题   语言: 无限制
+Description
+
+lyd is practicing typing word. There is a text that lyd should finish. Since he cannot make sure that he can type correctly, so he will looks at the screen to check it. And if there is any letters that type wrong, he should press the 'backspace' key several times to that position and continue his typing from there. In order to speed up, lyd want you to find the way (when type and when stop to check the text) that typing fastest.
+
+Type the i-th character in the text takes ci units of time, and the probability of making an error of it is pi. Looking at the screen takes t units of time, press 'backspace' take ts units of time.
+
+The text is n characters long.
+
+So you task is to find a way that uses minimal expected time to finish the text, and then just output the minimal time.
+
+
+
+
+输入格式
+
+The input contains three lines:
+
+There are three numbers in the first line: integer n (1<=n<=100), real number t and ts.
+
+The second line contains n real numbers pi (0<=pi<=0.5) and the third line contains n real numbers ci .
+
+
+
+输出格式
+
+Output only one real number by 3 decimal places of precision, representing the minimal expected time.
+
+
+
+输入样例
+
+3 1 1
+0.3 0.001 0.3
+1 1 1
+
+
+输出样例
+
+7.58

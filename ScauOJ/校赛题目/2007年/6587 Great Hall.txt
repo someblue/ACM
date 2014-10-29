@@ -1,0 +1,35 @@
+6587 Great Hall
+
+时间限制:500MS  内存限制:1000K
+提交次数:54 通过次数:28
+
+题型: 编程题   语言: 无限制
+Description
+
+To cope with the expenditure of enrollment, SCAU decide to build more dormitories, dining halls, classrooms and other buildings. Now there is an argument about the location of the Great Hall which will be built in a year. The Great Hall is a wonderful place to see movies, dance and make a speech. So every student really want the Great Hall to be built in the zone where he or she lives. But there is only one Great Hall. We must select the most practicable location from N（1<=N<=100） zones in the campus. The most practicable location should satisfy the following conditions: (1) The location must be one of the N Zones; (2) The total sum of all distances between each zone and the location is minimum;
+
+
+
+
+输入格式
+
+The first line is two positive integer N,M( 1<N<500, 1<M<10000), N is the number of zones. The zones are numbered from 1 to N. Then M lines follow. Each line consists of 3 positive integers S, E, D(D<10000), that means the distance of zone S to zone E is D. You may assume that all zones are connected. All numbers are separated by spaces.
+
+
+输出格式
+
+Output the Number of the zone where the most practicable location is and the total sum of all distances between each zone and the location. Two numbers are separated by a space. There may be multiple possible answers, just output any one of them.
+
+
+输入样例
+
+5 4
+1 3 8
+2 3 11
+3 4 6
+3 5 9
+
+
+输出样例
+
+3 34 

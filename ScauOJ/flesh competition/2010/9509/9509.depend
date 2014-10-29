@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1412401630 source:e:\workspace\acm\scauoj\flesh competition\2010\9509\main.cpp
+	<iostream>
+	<cstdio>
+	<cstring>
+	<algorithm>
+	<queue>
+

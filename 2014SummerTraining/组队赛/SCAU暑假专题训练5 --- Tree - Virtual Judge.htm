@@ -1,0 +1,928 @@
+
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<base href="/vjudge/" />
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<link rel="stylesheet" type="text/css" href="jquery-ui-1.8.16.custom/css/custom-theme/jquery-ui-1.8.16.custom.css?1408212907710" />
+<link rel="stylesheet" type="text/css" href="css/demo_page.css?1408212907710" />
+<link rel="stylesheet" type="text/css" href="css/demo_table_jui.css?1408212907710" />
+<link rel="stylesheet" type="text/css" href="css/global.css?1408212907710" />
+<link rel="shortcut icon" href="images/logo.ico" />
+
+<script type="text/javascript" src="javascript/jquery.min.js?1408212907710"></script>
+<script type="text/javascript" src="jquery-ui-1.8.16.custom/js/jquery-ui-1.8.16.custom.min.js?1408212907710"></script>
+<script type="text/javascript" src="javascript/jquery.dataTables.min.js?1408212907710"></script>
+<script type="text/javascript" src="javascript/common.js?1408212907710"></script>
+<script type="text/javascript">var basePath = "/vjudge/";</script>
+
+		<title>SCAU暑假专题训练5 --- Tree - Virtual Judge</title>
+		<link href="facebox/facebox.css" media="screen" rel="stylesheet" type="text/css" />
+		<style type="text/css" media="screen">
+			.hiddable {font-size:17px}
+			.dataTables_paginate {float: right;text-align: right;}
+			table.blue_border td {border:1px solid #A6C9E2;}
+		</style>
+
+		<script type="text/javascript" src="javascript/base64.js?1408212907710"></script>
+		<script type="text/javascript" src="javascript/jquery.quicksand.js"></script>
+		<script type="text/javascript" src="javascript/jquery.ba-hashchange.min.js"></script>
+		<script type="text/javascript" src='javascript/jquery.scrollTo-min.js'></script>
+		<script type="text/javascript" src="javascript/jquery.cookie.js"></script>
+		<script type="text/javascript" src="facebox/facebox.js"></script>
+
+		<script type="text/javascript" src="dwr/interface/judgeService.js"></script>
+		<script type='text/javascript' src='javascript/engine.js'></script>
+		<script type='text/javascript' src='dwr/util.js'></script>
+
+		<script type="text/javascript" src="javascript/viewContest.js?1408212907710"></script>
+	</head>
+
+	<body>
+		
+<table width="100%" border="0" class="banner" style="margin-bottom:30px;"><tr><td><a href="toIndex.action">Home</a></td><td><a href="problem/toListProblem.action">Problems</a></td><td><a href="problem/status.action">Status</a></td><td><a href="contest/toListContest.action">Contest</a></td><td>[<a id="my_account" uid="47062" href="user/toUpdate.action?uid=47062">loli_kong</a>]</td><td><a id="logout" href="javascript:void(0)">Logout</a></td></tr></table>
+
+
+		<marquee id="contest_announcement" height="25" style="text-align:center;color:red;font-weight:bold" onmouseout="this.start()" onmouseover="this.stop()" scrollamount="2" scrolldelay="1" behavior="alternate">前8题为基础题(会作为上课例题，大家课前先看一下题意，有空就思考一下)。后面的是相关练习，比较多，有难有易包含了各种类型，大家按照需要挑着做。为了让大家学得深刻点，题目顺序打乱，并不是某几道连续的题目是同一个算法。</marquee><script type="text/javascript">$("table.banner").css("margin-bottom", "5px");if ($.browser.safari)$("#contest_announcement").removeAttr("behavior");</script>
+		<input type="hidden" name="cid" value="50632" id="cid"/>
+		
+		<div id="contest_title" class="ptt">
+			
+			SCAU暑假专题训练5 --- Tree
+		</div>
+		<div id="time_container" style="width:96%;height:40px;margin:auto;font-family: Lucida Grande,Lucida Sans,Arial,sans-serif;font-size: 12px;">
+			<div id="time_index" style="text-align:right;float:left">
+				<span></span>
+			</div>
+			<div id="time_total" style="text-align:right;">
+				<span></span>
+			</div>
+			<div id="time_controller" style="clear:both"></div>
+		</div>
+		
+		<div id="contest_tabs" style="background:transparent;display:none">
+			<ul>
+				<li><a href="#overview" rel="#overview">Overview</a></li>
+				
+					<li><a href="#problem" rel="#problem">Problem</a></li>
+					<li><a href="#status" rel="#status">Status</a></li>
+					<li><a href="#rank" rel="#rank">Rank</a></li>
+				
+				
+					<li><a href="#discuss" rel="#discuss">Discuss</a></li>
+				
+			</ul>
+			
+
+
+<div id="overview">
+	
+	<table style="margin:auto" class="plm">
+		<tr>
+			<td class="alignRight"><b>Current Time: </b></td>
+			<td class="alignLeft"><span class="currentTime"></span></td>
+			<td class="alignRight"><b>Contest Type: </b></td>
+			<td class="alignLeft"><font color="blue">Public</font></td>
+		</tr>
+		<tr>
+			<td class="alignRight"><b>Start Time: </b></td>
+			<td class="alignLeft"><span class="plainDate">1406032200000</span></td>
+			<td class="alignRight"><b>Contest Status: </b></td>
+			<td class="alignLeft">
+				
+				
+				<font color="green">Ended</font>
+			</td>
+		</tr>
+		<tr>
+			<td class="alignRight"><b>End Time: </b></td>
+			<td class="alignLeft"><span class="plainDate">1408624200000</span></td>
+			<td class="alignRight"><b>Manager: </b></td>
+			<td class="alignLeft"><a href="user/profile.action?uid=8803" >Scau_Ly</a></td>
+		</tr>
+	</table>
+
+
+	
+	<div id="contest_opt" style="text-align:center;margin-top:10px">
+		
+			<a id="clone_contest" href="contest/toAddContest.action?cid=50632" title="Create a contest using the same problems, in which you can see the original score board.">Clone this contest</a>
+		
+		
+	</div>
+	<table style="width:960px;margin-top:20px" cellpadding="0" cellspacing="0" border="0" class="display" id="viewContest">
+		<thead>
+			<tr>
+				<th style="text-align: right;width:20px"></th>
+				<th style="text-align: left;width:90px"></th>
+				<th style="text-align: right;width:90px">ID</th>
+				
+					<th style="width:150px">Origin</th>
+				
+				<th style="text-align: left;padding-left:50px;">Title</th>
+			</tr>
+		</thead>
+		
+		
+			<tr>
+				<td style="text-align: right"></td>
+				<td style="text-align: center"></td>
+				<td style="text-align: right">Problem A</td>
+				
+					<td class="center">
+						<a target="_blank" href="http://acm.hdu.edu.cn/showproblem.php?pid=1213">HDU 1213</a>
+					</td>
+				
+				<td style="padding-left:50px;">
+					<a href="contest/view.action?cid=50632#problem/A">
+						How Many Tables
+					</a>
+				</td>
+			</tr>
+		
+			<tr>
+				<td style="text-align: right"></td>
+				<td style="text-align: center"></td>
+				<td style="text-align: right">Problem B</td>
+				
+					<td class="center">
+						<a target="_blank" href="http://acm.hdu.edu.cn/showproblem.php?pid=1232">HDU 1232</a>
+					</td>
+				
+				<td style="padding-left:50px;">
+					<a href="contest/view.action?cid=50632#problem/B">
+						畅通工程
+					</a>
+				</td>
+			</tr>
+		
+			<tr>
+				<td style="text-align: right"></td>
+				<td style="text-align: center"></td>
+				<td style="text-align: right">Problem C</td>
+				
+					<td class="center">
+						<a target="_blank" href="http://acm.hdu.edu.cn/showproblem.php?pid=2586">HDU 2586</a>
+					</td>
+				
+				<td style="padding-left:50px;">
+					<a href="contest/view.action?cid=50632#problem/C">
+						How far away ？
+					</a>
+				</td>
+			</tr>
+		
+			<tr>
+				<td style="text-align: right"></td>
+				<td style="text-align: center"></td>
+				<td style="text-align: right">Problem D</td>
+				
+					<td class="center">
+						<a target="_blank" href="http://poj.org/problem?id=3264">POJ 3264</a>
+					</td>
+				
+				<td style="padding-left:50px;">
+					<a href="contest/view.action?cid=50632#problem/D">
+						Balanced Lineup
+					</a>
+				</td>
+			</tr>
+		
+			<tr>
+				<td style="text-align: right"></td>
+				<td style="text-align: center"></td>
+				<td style="text-align: right">Problem E</td>
+				
+					<td class="center">
+						<a target="_blank" href="http://acm.hdu.edu.cn/showproblem.php?pid=1520">HDU 1520</a>
+					</td>
+				
+				<td style="padding-left:50px;">
+					<a href="contest/view.action?cid=50632#problem/E">
+						Anniversary party
+					</a>
+				</td>
+			</tr>
+		
+			<tr>
+				<td style="text-align: right"></td>
+				<td style="text-align: center"></td>
+				<td style="text-align: right">Problem F</td>
+				
+					<td class="center">
+						<a target="_blank" href="http://acm.hdu.edu.cn/showproblem.php?pid=1011">HDU 1011</a>
+					</td>
+				
+				<td style="padding-left:50px;">
+					<a href="contest/view.action?cid=50632#problem/F">
+						Starship Troopers
+					</a>
+				</td>
+			</tr>
+		
+			<tr>
+				<td style="text-align: right"></td>
+				<td style="text-align: center"></td>
+				<td style="text-align: right">Problem G</td>
+				
+					<td class="center">
+						<a target="_blank" href="http://acm.hdu.edu.cn/showproblem.php?pid=2196">HDU 2196</a>
+					</td>
+				
+				<td style="padding-left:50px;">
+					<a href="contest/view.action?cid=50632#problem/G">
+						Computer
+					</a>
+				</td>
+			</tr>
+		
+			<tr>
+				<td style="text-align: right"></td>
+				<td style="text-align: center"></td>
+				<td style="text-align: right">Problem H</td>
+				
+					<td class="center">
+						<a target="_blank" href="http://acm.hdu.edu.cn/showproblem.php?pid=1561">HDU 1561</a>
+					</td>
+				
+				<td style="padding-left:50px;">
+					<a href="contest/view.action?cid=50632#problem/H">
+						The more, The Better
+					</a>
+				</td>
+			</tr>
+		
+			<tr>
+				<td style="text-align: right"></td>
+				<td style="text-align: center"></td>
+				<td style="text-align: right">Problem I</td>
+				
+					<td class="center">
+						<a target="_blank" href="http://acm.hdu.edu.cn/showproblem.php?pid=3371">HDU 3371</a>
+					</td>
+				
+				<td style="padding-left:50px;">
+					<a href="contest/view.action?cid=50632#problem/I">
+						Connect the Cities
+					</a>
+				</td>
+			</tr>
+		
+			<tr>
+				<td style="text-align: right"></td>
+				<td style="text-align: center"></td>
+				<td style="text-align: right">Problem J</td>
+				
+					<td class="center">
+						<a target="_blank" href="http://acm.hdu.edu.cn/showproblem.php?pid=1598">HDU 1598</a>
+					</td>
+				
+				<td style="padding-left:50px;">
+					<a href="contest/view.action?cid=50632#problem/J">
+						find the most comfortable road
+					</a>
+				</td>
+			</tr>
+		
+			<tr>
+				<td style="text-align: right"></td>
+				<td style="text-align: center"></td>
+				<td style="text-align: right">Problem K</td>
+				
+					<td class="center">
+						<a target="_blank" href="http://acm.hdu.edu.cn/showproblem.php?pid=3461">HDU 3461</a>
+					</td>
+				
+				<td style="padding-left:50px;">
+					<a href="contest/view.action?cid=50632#problem/K">
+						Code Lock
+					</a>
+				</td>
+			</tr>
+		
+			<tr>
+				<td style="text-align: right"></td>
+				<td style="text-align: center"></td>
+				<td style="text-align: right">Problem L</td>
+				
+					<td class="center">
+						<a target="_blank" href="http://acm.hdu.edu.cn/showproblem.php?pid=2874">HDU 2874</a>
+					</td>
+				
+				<td style="padding-left:50px;">
+					<a href="contest/view.action?cid=50632#problem/L">
+						Connections between cities
+					</a>
+				</td>
+			</tr>
+		
+			<tr>
+				<td style="text-align: right"></td>
+				<td style="text-align: center"></td>
+				<td style="text-align: right">Problem M</td>
+				
+					<td class="center">
+						<a target="_blank" href="http://acm.hdu.edu.cn/showproblem.php?pid=2888">HDU 2888</a>
+					</td>
+				
+				<td style="padding-left:50px;">
+					<a href="contest/view.action?cid=50632#problem/M">
+						Check Corners
+					</a>
+				</td>
+			</tr>
+		
+			<tr>
+				<td style="text-align: right"></td>
+				<td style="text-align: center"></td>
+				<td style="text-align: right">Problem N</td>
+				
+					<td class="center">
+						<a target="_blank" href="http://acm.hdu.edu.cn/showproblem.php?pid=3635">HDU 3635</a>
+					</td>
+				
+				<td style="padding-left:50px;">
+					<a href="contest/view.action?cid=50632#problem/N">
+						Dragon Balls
+					</a>
+				</td>
+			</tr>
+		
+			<tr>
+				<td style="text-align: right"></td>
+				<td style="text-align: center"></td>
+				<td style="text-align: right">Problem O</td>
+				
+					<td class="center">
+						<a target="_blank" href="http://acm.zju.edu.cn/onlinejudge/showProblem.do?problemCode=3649">ZOJ 3649</a>
+					</td>
+				
+				<td style="padding-left:50px;">
+					<a href="contest/view.action?cid=50632#problem/O">
+						Social Net
+					</a>
+				</td>
+			</tr>
+		
+			<tr>
+				<td style="text-align: right"></td>
+				<td style="text-align: center"></td>
+				<td style="text-align: right">Problem P</td>
+				
+					<td class="center">
+						<a target="_blank" href="http://poj.org/problem?id=3164">POJ 3164</a>
+					</td>
+				
+				<td style="padding-left:50px;">
+					<a href="contest/view.action?cid=50632#problem/P">
+						Command Network
+					</a>
+				</td>
+			</tr>
+		
+			<tr>
+				<td style="text-align: right"></td>
+				<td style="text-align: center"></td>
+				<td style="text-align: right">Problem Q</td>
+				
+					<td class="center">
+						<a target="_blank" href="http://poj.org/problem?id=1470">POJ 1470</a>
+					</td>
+				
+				<td style="padding-left:50px;">
+					<a href="contest/view.action?cid=50632#problem/Q">
+						Closest Common Ancestors
+					</a>
+				</td>
+			</tr>
+		
+			<tr>
+				<td style="text-align: right"></td>
+				<td style="text-align: center"></td>
+				<td style="text-align: right">Problem R</td>
+				
+					<td class="center">
+						<a target="_blank" href="http://poj.org/problem?id=3368">POJ 3368</a>
+					</td>
+				
+				<td style="padding-left:50px;">
+					<a href="contest/view.action?cid=50632#problem/R">
+						Frequent values
+					</a>
+				</td>
+			</tr>
+		
+			<tr>
+				<td style="text-align: right"></td>
+				<td style="text-align: center"></td>
+				<td style="text-align: right">Problem S</td>
+				
+					<td class="center">
+						<a target="_blank" href="http://acm.hdu.edu.cn/showproblem.php?pid=4424">HDU 4424</a>
+					</td>
+				
+				<td style="padding-left:50px;">
+					<a href="contest/view.action?cid=50632#problem/S">
+						Conquer a New Region
+					</a>
+				</td>
+			</tr>
+		
+			<tr>
+				<td style="text-align: right"></td>
+				<td style="text-align: center"></td>
+				<td style="text-align: right">Problem T</td>
+				
+					<td class="center">
+						<a target="_blank" href="http://acm.hdu.edu.cn/showproblem.php?pid=3234">HDU 3234</a>
+					</td>
+				
+				<td style="padding-left:50px;">
+					<a href="contest/view.action?cid=50632#problem/T">
+						Exclusive-OR
+					</a>
+				</td>
+			</tr>
+		
+			<tr>
+				<td style="text-align: right"></td>
+				<td style="text-align: center"></td>
+				<td style="text-align: right">Problem U</td>
+				
+					<td class="center">
+						<a target="_blank" href="http://acm.hdu.edu.cn/showproblem.php?pid=1829">HDU 1829</a>
+					</td>
+				
+				<td style="padding-left:50px;">
+					<a href="contest/view.action?cid=50632#problem/U">
+						A Bug's Life
+					</a>
+				</td>
+			</tr>
+		
+			<tr>
+				<td style="text-align: right"></td>
+				<td style="text-align: center"></td>
+				<td style="text-align: right">Problem V</td>
+				
+					<td class="center">
+						<a target="_blank" href="http://acm.hdu.edu.cn/showproblem.php?pid=4009">HDU 4009</a>
+					</td>
+				
+				<td style="padding-left:50px;">
+					<a href="contest/view.action?cid=50632#problem/V">
+						Transfer water
+					</a>
+				</td>
+			</tr>
+		
+			<tr>
+				<td style="text-align: right"></td>
+				<td style="text-align: center"></td>
+				<td style="text-align: right">Problem W</td>
+				
+					<td class="center">
+						<a target="_blank" href="http://acm.hdu.edu.cn/showproblem.php?pid=2473">HDU 2473</a>
+					</td>
+				
+				<td style="padding-left:50px;">
+					<a href="contest/view.action?cid=50632#problem/W">
+						Junk-Mail Filter
+					</a>
+				</td>
+			</tr>
+		
+			<tr>
+				<td style="text-align: right"></td>
+				<td style="text-align: center"></td>
+				<td style="text-align: right">Problem X</td>
+				
+					<td class="center">
+						<a target="_blank" href="http://acm.hdu.edu.cn/showproblem.php?pid=3367">HDU 3367</a>
+					</td>
+				
+				<td style="padding-left:50px;">
+					<a href="contest/view.action?cid=50632#problem/X">
+						Pseudoforest
+					</a>
+				</td>
+			</tr>
+		
+			<tr>
+				<td style="text-align: right"></td>
+				<td style="text-align: center"></td>
+				<td style="text-align: right">Problem Y</td>
+				
+					<td class="center">
+						<a target="_blank" href="http://poj.org/problem?id=1679">POJ 1679</a>
+					</td>
+				
+				<td style="padding-left:50px;">
+					<a href="contest/view.action?cid=50632#problem/Y">
+						The Unique MST
+					</a>
+				</td>
+			</tr>
+		
+			<tr>
+				<td style="text-align: right"></td>
+				<td style="text-align: center"></td>
+				<td style="text-align: right">Problem Z</td>
+				
+					<td class="center">
+						<a target="_blank" href="http://poj.org/problem?id=3723">POJ 3723</a>
+					</td>
+				
+				<td style="padding-left:50px;">
+					<a href="contest/view.action?cid=50632#problem/Z">
+						Conscription
+					</a>
+				</td>
+			</tr>
+		
+	</table>
+	
+	
+	<div class="description">
+		
+	</div>
+</div>
+
+
+
+	
+
+			
+				
+
+
+<div id="problem" style="font-size:14px">
+	<div id="problem_number_container" style="margin:auto;text-align:center;display:none">
+		<input type="radio" name="problem_number" id="problem_numberA" checked="checked" value="A" onclick="this.blur()"/><label for="problem_numberA">A - How Many Tables</label>
+<input type="radio" name="problem_number" id="problem_numberB" value="B" onclick="this.blur()"/><label for="problem_numberB">B - 畅通工程</label>
+<input type="radio" name="problem_number" id="problem_numberC" value="C" onclick="this.blur()"/><label for="problem_numberC">C - How far away ？</label>
+<input type="radio" name="problem_number" id="problem_numberD" value="D" onclick="this.blur()"/><label for="problem_numberD">D - Balanced Lineup</label>
+<input type="radio" name="problem_number" id="problem_numberE" value="E" onclick="this.blur()"/><label for="problem_numberE">E - Anniversary party</label>
+<input type="radio" name="problem_number" id="problem_numberF" value="F" onclick="this.blur()"/><label for="problem_numberF">F - Starship Troopers</label>
+<input type="radio" name="problem_number" id="problem_numberG" value="G" onclick="this.blur()"/><label for="problem_numberG">G - Computer</label>
+<input type="radio" name="problem_number" id="problem_numberH" value="H" onclick="this.blur()"/><label for="problem_numberH">H - The more, The Better</label>
+<input type="radio" name="problem_number" id="problem_numberI" value="I" onclick="this.blur()"/><label for="problem_numberI">I - Connect the Cities</label>
+<input type="radio" name="problem_number" id="problem_numberJ" value="J" onclick="this.blur()"/><label for="problem_numberJ">J - find the most comfortable road</label>
+<input type="radio" name="problem_number" id="problem_numberK" value="K" onclick="this.blur()"/><label for="problem_numberK">K - Code Lock</label>
+<input type="radio" name="problem_number" id="problem_numberL" value="L" onclick="this.blur()"/><label for="problem_numberL">L - Connections between cities</label>
+<input type="radio" name="problem_number" id="problem_numberM" value="M" onclick="this.blur()"/><label for="problem_numberM">M - Check Corners</label>
+<input type="radio" name="problem_number" id="problem_numberN" value="N" onclick="this.blur()"/><label for="problem_numberN">N - Dragon Balls</label>
+<input type="radio" name="problem_number" id="problem_numberO" value="O" onclick="this.blur()"/><label for="problem_numberO">O - Social Net</label>
+<input type="radio" name="problem_number" id="problem_numberP" value="P" onclick="this.blur()"/><label for="problem_numberP">P - Command Network</label>
+<input type="radio" name="problem_number" id="problem_numberQ" value="Q" onclick="this.blur()"/><label for="problem_numberQ">Q - Closest Common Ancestors</label>
+<input type="radio" name="problem_number" id="problem_numberR" value="R" onclick="this.blur()"/><label for="problem_numberR">R - Frequent values</label>
+<input type="radio" name="problem_number" id="problem_numberS" value="S" onclick="this.blur()"/><label for="problem_numberS">S - Conquer a New Region</label>
+<input type="radio" name="problem_number" id="problem_numberT" value="T" onclick="this.blur()"/><label for="problem_numberT">T - Exclusive-OR</label>
+<input type="radio" name="problem_number" id="problem_numberU" value="U" onclick="this.blur()"/><label for="problem_numberU">U - A Bug's Life</label>
+<input type="radio" name="problem_number" id="problem_numberV" value="V" onclick="this.blur()"/><label for="problem_numberV">V - Transfer water</label>
+<input type="radio" name="problem_number" id="problem_numberW" value="W" onclick="this.blur()"/><label for="problem_numberW">W - Junk-Mail Filter</label>
+<input type="radio" name="problem_number" id="problem_numberX" value="X" onclick="this.blur()"/><label for="problem_numberX">X - Pseudoforest</label>
+<input type="radio" name="problem_number" id="problem_numberY" value="Y" onclick="this.blur()"/><label for="problem_numberY">Y - The Unique MST</label>
+<input type="radio" name="problem_number" id="problem_numberZ" value="Z" onclick="this.blur()"/><label for="problem_numberZ">Z - Conscription</label>
+
+	</div>
+
+	<div class="plm" style="clear:both">
+		<div class="ptt" id="problem_title"></div>
+		<span id="crawling" style="display:none" class="crawlInfo">
+			<b><font color="green">Crawling in process...</font></b>
+		</span>
+		<span id="crawlFailed" style="display:none" class="crawlInfo">
+			<b><font color="red">Crawling failed</font></b>
+		</span>
+		<span id="crawlSuccess" style="display:none" class="crawlInfo">
+			<b>Time Limit:</b><span id="timeLimit"></span>MS&nbsp;&nbsp;&nbsp;&nbsp;
+			<b>Memory Limit:</b><span id="memoryLimit"></span>KB&nbsp;&nbsp;&nbsp;&nbsp;
+			<b>64bit IO Format:</b><span id="_64IOFormat"></span>
+		</span>
+		<div id="problem_opt" style="font-size:12px;margin-top:10px">
+			<a id="submit" href="javascript:void(0)">Submit</a>
+			<a id="problem_status" href="javascript:void(0)">Status</a>
+			
+				<a id="problem_practice" target="_blank" href="">Practice</a>
+				<a id="problem_origin" target="_blank" href="">_</a>
+			
+		</div>
+	</div>
+
+	<div style="width:960px;margin:auto">
+		
+		<div class="hiddable" id="vj_description"><p class="pst">Description</p><div class="textBG"></div></div>
+		<div class="hiddable" id="vj_input"><p class="pst">Input</p><div class="textBG"></div></div>
+		<div class="hiddable" id="vj_output"><p class="pst">Output</p><div class="textBG"></div></div>
+		<div class="hiddable" id="vj_sampleInput"><p class="pst">Sample Input</p><div class="textBG"></div></div>
+		<div class="hiddable" id="vj_sampleOutput"><p class="pst">Sample Output</p><div class="textBG"></div></div>
+		<div class="hiddable" id="vj_hint"><p class="pst">Hint</p><div class="textBG"></div></div>
+	</div>
+	
+	<div id="dialog-form-submit" style="display:none" title="Submit">
+		<p class="validateTips"></p>
+		<table>
+			<tr>
+				<td style="text-align:right;padding:5px">Problem:</td>
+				<td><span id="submit_num" style="color:green"></span></td>
+			</tr>
+			<tr>
+				<td style="text-align:right;padding:5px">Language:</td>
+				<td><select id="language" name="language"></select></td>
+			</tr>
+			<tr>
+				<td style="text-align:right;padding:5px">Public:</td>
+				<td><input type="radio" name="isOpen" id="isOpen0" value="0"/><label for="isOpen0">No</label>
+<input type="radio" name="isOpen" id="isOpen1" checked="checked" value="1"/><label for="isOpen1">Yes</label>
+</td>
+			</tr>
+		</table>
+		<textarea name="source" class="text ui-widget-content ui-corner-all" style="width:100%;height:360px;background:#F4F4F4;font-family: Courier New,Courier,monospace"></textarea>
+	</div>
+</div>
+
+				
+
+
+<div id="status" style="font-size:14px;padding:12px 0">
+	<form id="form_status" style="font-size:12px">
+		Username:<input type="text" name="un" value="" />&nbsp;&nbsp;
+		Problem:<select name="num" id="num" style="width:160px">
+    <option value="A">A - How Many Tables</option>
+    <option value="B">B - 畅通工程</option>
+    <option value="C">C - How far away ？</option>
+    <option value="D">D - Balanced Lineup</option>
+    <option value="E">E - Anniversary party</option>
+    <option value="F">F - Starship Troopers</option>
+    <option value="G">G - Computer</option>
+    <option value="H">H - The more, The Better</option>
+    <option value="I">I - Connect the Cities</option>
+    <option value="J">J - find the most comfortable road</option>
+    <option value="K">K - Code Lock</option>
+    <option value="L">L - Connections between cities</option>
+    <option value="M">M - Check Corners</option>
+    <option value="N">N - Dragon Balls</option>
+    <option value="O">O - Social Net</option>
+    <option value="P">P - Command Network</option>
+    <option value="Q">Q - Closest Common Ancestors</option>
+    <option value="R">R - Frequent values</option>
+    <option value="S">S - Conquer a New Region</option>
+    <option value="T">T - Exclusive-OR</option>
+    <option value="U">U - A Bug's Life</option>
+    <option value="V">V - Transfer water</option>
+    <option value="W">W - Junk-Mail Filter</option>
+    <option value="X">X - Pseudoforest</option>
+    <option value="Y">Y - The Unique MST</option>
+    <option value="Z">Z - Conscription</option>
+
+
+</select>
+
+&nbsp;&nbsp;
+		Result:<select name="res" id="res" style="width:160px">
+    <option value="0" selected="selected">All</option>
+    <option value="1">Accepted</option>
+    <option value="2">Wrong Answer</option>
+    <option value="3">Time Limit Exceed</option>
+    <option value="4">Runtime Error</option>
+    <option value="5">Presentation Error</option>
+    <option value="6">Compile Error</option>
+    <option value="7">Processing</option>
+
+
+</select>
+
+&nbsp;&nbsp;
+		<input type="submit" value="Filter" id="filter"/>&nbsp;&nbsp;
+		<input type="button" value="Reset" id="reset" />
+	</form>
+
+	<table cellpadding="0" cellspacing="0" border="0" class="display" id="table_status" style="text-align:center">
+		<thead>
+			<tr>
+				<th>RunID</th>
+				<th>User</th>
+				<th>Problem</th>
+				<th>Result</th>
+				<th style="text-align:right;padding:3px">Memory</th>
+				<th style="text-align:right;padding:3px">Time</th>
+				<th>Language</th>
+				<th style="text-align:right;padding:3px">Length</th>
+				<th>Submit Time</th>
+				<th></th>
+				<th></th>
+				<th></th>
+				<th></th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td colspan="13">Loading data from server</td>
+			</tr>
+		</tbody>
+	</table>
+	<input type="hidden" name="isSup" value="" id="isSup"/>
+
+</div>
+
+				
+
+
+<div id="rank" style="padding:0;min-height:300px">
+
+	<div id="rank_header" style="background-color:#F2FCF7;display:none;position:fixed;top:0;z-index:100" data-id="rank_header">
+		<div class="rank">Rank</div>
+		<div class="id">ID</div>
+		<div class="solve">Solve</div>
+		<div class="standing_time">Penalty</div>
+		
+			<div class="standing_time"><a href="contest/view.action?cid=50632#problem/A">A</a></div>
+		
+			<div class="standing_time"><a href="contest/view.action?cid=50632#problem/B">B</a></div>
+		
+			<div class="standing_time"><a href="contest/view.action?cid=50632#problem/C">C</a></div>
+		
+			<div class="standing_time"><a href="contest/view.action?cid=50632#problem/D">D</a></div>
+		
+			<div class="standing_time"><a href="contest/view.action?cid=50632#problem/E">E</a></div>
+		
+			<div class="standing_time"><a href="contest/view.action?cid=50632#problem/F">F</a></div>
+		
+			<div class="standing_time"><a href="contest/view.action?cid=50632#problem/G">G</a></div>
+		
+			<div class="standing_time"><a href="contest/view.action?cid=50632#problem/H">H</a></div>
+		
+			<div class="standing_time"><a href="contest/view.action?cid=50632#problem/I">I</a></div>
+		
+			<div class="standing_time"><a href="contest/view.action?cid=50632#problem/J">J</a></div>
+		
+			<div class="standing_time"><a href="contest/view.action?cid=50632#problem/K">K</a></div>
+		
+			<div class="standing_time"><a href="contest/view.action?cid=50632#problem/L">L</a></div>
+		
+			<div class="standing_time"><a href="contest/view.action?cid=50632#problem/M">M</a></div>
+		
+			<div class="standing_time"><a href="contest/view.action?cid=50632#problem/N">N</a></div>
+		
+			<div class="standing_time"><a href="contest/view.action?cid=50632#problem/O">O</a></div>
+		
+			<div class="standing_time"><a href="contest/view.action?cid=50632#problem/P">P</a></div>
+		
+			<div class="standing_time"><a href="contest/view.action?cid=50632#problem/Q">Q</a></div>
+		
+			<div class="standing_time"><a href="contest/view.action?cid=50632#problem/R">R</a></div>
+		
+			<div class="standing_time"><a href="contest/view.action?cid=50632#problem/S">S</a></div>
+		
+			<div class="standing_time"><a href="contest/view.action?cid=50632#problem/T">T</a></div>
+		
+			<div class="standing_time"><a href="contest/view.action?cid=50632#problem/U">U</a></div>
+		
+			<div class="standing_time"><a href="contest/view.action?cid=50632#problem/V">V</a></div>
+		
+			<div class="standing_time"><a href="contest/view.action?cid=50632#problem/W">W</a></div>
+		
+			<div class="standing_time"><a href="contest/view.action?cid=50632#problem/X">X</a></div>
+		
+			<div class="standing_time"><a href="contest/view.action?cid=50632#problem/Y">Y</a></div>
+		
+			<div class="standing_time"><a href="contest/view.action?cid=50632#problem/Z">Z</a></div>
+		
+		<div style="text-align:right"></div>
+	</div>
+	
+	<div id="rank_data_destination" style="display:none"></div>
+	<div id="rank_data_source"></div>
+
+	<div id="rank_foot" style="background-color:transparent;display:none;position:fixed;bottom:0;z-index:100" class="disp" data-id="rank_foot">
+		<div class="rank"></div>
+		<div class="id"></div>
+		<div class="solve"></div>
+		<div class="standing_time"></div>
+		
+			<div class="standing_time"></div>
+		
+			<div class="standing_time"></div>
+		
+			<div class="standing_time"></div>
+		
+			<div class="standing_time"></div>
+		
+			<div class="standing_time"></div>
+		
+			<div class="standing_time"></div>
+		
+			<div class="standing_time"></div>
+		
+			<div class="standing_time"></div>
+		
+			<div class="standing_time"></div>
+		
+			<div class="standing_time"></div>
+		
+			<div class="standing_time"></div>
+		
+			<div class="standing_time"></div>
+		
+			<div class="standing_time"></div>
+		
+			<div class="standing_time"></div>
+		
+			<div class="standing_time"></div>
+		
+			<div class="standing_time"></div>
+		
+			<div class="standing_time"></div>
+		
+			<div class="standing_time"></div>
+		
+			<div class="standing_time"></div>
+		
+			<div class="standing_time"></div>
+		
+			<div class="standing_time"></div>
+		
+			<div class="standing_time"></div>
+		
+			<div class="standing_time"></div>
+		
+			<div class="standing_time"></div>
+		
+			<div class="standing_time"></div>
+		
+			<div class="standing_time"></div>
+		
+		<div class="standing_time" style='background-color:#D3D6FF'></div>
+	</div>
+
+	<div id="div_rank_tool" style="text-align:right;position:fixed;bottom:80px;right:15px;z-index:999999">
+		<img src="images/find_me.png" id="img_find_me" title="Find me" height="55" style="visibility:hidden;cursor: pointer" />
+		<img src="images/go_top.png" id="img_go_top" title="Go to top" height="60" style="visibility:hidden;cursor: pointer" />
+		<img src="images/config.png" id="rank_setting" title="Rank config" height="60" style="cursor: pointer" />
+	</div>
+	
+	<div id="dialog-form-rank-setting" style="display:none" title="Rank Setting"></div>
+	
+</div>
+
+			
+			
+				
+
+
+<div id="discuss" style="font-size:14px;padding:12px 0">
+	<div id="disqus_thread" style="width:900px;margin:auto"></div>
+	<script type="text/javascript">
+	    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+		var disqus_shortname = 'vjudge'; // required: replace example with your forum shortname
+		var disqus_developer = 0;
+		var disqus_identifier = "contest/50632";
+		var disqus_url = basePath + "contest/view.action?cid=50632#discuss";
+		var disqus_title = "Contest - SCAU暑假专题训练5 --- Tree";
+		
+	    /* * * DON'T EDIT BELOW THIS LINE * * */
+	    var _showDiscuss = function() {
+	        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+	        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+	        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+	    };
+	</script>
+	<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+
+			
+		</div>		
+		
+
+<div style="text-align:center;margin-top:30px;clear:both;font-size:80%">
+	<hr />FAQ | About Virtual Judge | <a href="https://groups.google.com/group/virtual-judge" target="_blank">Forum</a> | <a href="discuss.action" target="_blank">Discuss</a> | <a href="http://code.google.com/p/virtual-judge/" target="_blank">Open Source Project</a><br />
+	All Copyright Reserved ©2010-2012 <a href="http://acm.hust.edu.cn">HUST ACM/ICPC</a> TEAM
+	
+	<br>Anything about the OJ, please ask in the <a href="https://groups.google.com/group/virtual-judge" target="_blank">forum</a>, or contact author:<a href="mailto:is.un@qq.com">Isun</a><br>
+	Server Time: <span class="currentTime"></span>
+</div>
+<script type="text/javascript">
+	var timeDiff = 1409253247035 - new Date().valueOf();
+	
+	function updateTime() {
+		$(".currentTime").html(new Date(new Date().valueOf() + timeDiff).format("yyyy-MM-dd hh:mm:ss"));
+	}
+	updateTime();
+	setInterval(updateTime, 1000);
+
+	var _gaq = _gaq || [];
+	_gaq.push(['_setAccount', 'UA-13231844-2']);
+	_gaq.push(['_trackPageview']);
+	
+	(function() {
+		var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+	})();
+</script>
+
+	</body>
+</html>

@@ -1,0 +1,6 @@
+    point u = l2.u,v;
+    point crosspoint = crosspoint_2line_v1(l1,l2);
+    if(dcmp(u.x-crosspoint.x)==0 && dcmp(u.y-crosspoint.y)==0) u=l2.v;
+    point sympoint = sym_point_line_v1(l1,u);
+    u = crosspoint;
+    v = u+u-sympoint;

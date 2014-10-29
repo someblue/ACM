@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1385021910 source:e:\information\c program\scauoj\flesh competition\2009\sudoku\main.cpp
+	<iostream>
+	<cstdio>
+

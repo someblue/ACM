@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1386657180 source:e:\information\c program\scauoj\flesh competition\2010\acmer must know\main.cpp
+	<iostream>
+	<cstdio>
+	<algorithm>
+	<cstring>
+

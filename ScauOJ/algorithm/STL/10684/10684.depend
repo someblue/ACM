@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1394678589 source:e:\information\c program\scauoj\algorithm\stl\10684\main.cpp
+	<iostream>
+	<utility>
+	<cstdio>
+	<cmath>
+	<algorithm>
+	<cstdio>
+

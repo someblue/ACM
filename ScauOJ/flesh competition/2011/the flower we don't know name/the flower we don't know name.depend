@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1384964666 source:e:\information\c program\scauoj\flesh competition\2012\the flower we don't know name\main.cpp
+	<iostream>
+	<cstdio>
+	<windows.h>
+

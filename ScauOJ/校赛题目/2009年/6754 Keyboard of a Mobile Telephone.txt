@@ -1,0 +1,36 @@
+6754 Keyboard of a Mobile Telephone
+
+时间限制:500MS  内存限制:1000K
+提交次数:95 通过次数:27
+
+题型: 编程题   语言: 无限制
+Description
+
+Now almost every student has a mobile telephone. But do you have making attention to the keyboard of a mobile telephone? This is the keyboard of a normal mobile telephone：
+
+It will show different letters if you press one key different times, for example you press the key “2” once it will show a letter ‘a’, twice show a ‘b’. And notice that press the key ‘0’ once will show a space. Now give you a sentence, which contains only lowercases and space, calculate how much times to press the keyboard at least to show the sentence. 
+
+
+输入格式
+
+The first line contains an integer n, which means the number of cases. Per case consist of only one sentence, which contains only lowercases and spaces and its length less or equal 200.
+
+
+输出格式
+
+Per case output an integer, which is the least times to press the keyboard, in one line.
+
+
+输入样例
+
+1
+this problem is so easy
+
+
+输出样例
+
+53 
+
+来源
+
+By Hanqiu 

@@ -1,0 +1,55 @@
+10309 Geovisualization
+
+时间限制:1000MS  内存限制:65535K
+提交次数:12 通过次数:6
+
+题型: 编程题   语言: 无限制
+Description
+
+As a GIS programmer, PKKJ is writing a program to display a map the screen. As you know, the features in the map, 
+such as highways, rivers and pipeline, consist of a great amount of segments. A segment is a straight line from 
+Point A(x1, y1) to Point B(x2, y2). When display these segments, each of them should be clipped into the screen.
+ That means the part which is located out of the screen should be deleted. A screen can be regard as a rectangle.
+ For example, in the illustration below, the rectangle represents the boundary of the screen. Segment AB in should 
+be cut into BC before being drawn to the screen.
+
+
+
+Now give you the coordinates of the both ends of a segment, you should cut this segment to fit the extent of the 
+screen and output the coordinates of the result segment. To simplify this problem, you can assume that the left-bottom 
+coordinate of the screen is always (0, 0) and the right-top is (30, 20). What's more, to make this problem easier,
+ all the segment are horizontal(y1 = y2, x1≠x2) or vertical(x1 = x2, y1≠y2).
+
+
+
+输入格式
+
+Each input file contains only one test case with four integers representing the ends of one segment:
+x1 y1 x2 y2
+(x1, y1) is the one point and (x2, y2) is another point. It is guarantee that -100 <= x1, x2, y1, y2 <= 100, 
+and no segment will overlap with the boundary of screen. Segments like (0, 0)-(0, 10) will not appear.
+
+
+输出格式
+
+You should output the coordinates of the result segment. 
+x1 y1 x2 y2
+You should output the left point or bottom point first and then the right or upper point. If all part of the segment 
+is outside the screen, you should output “none”.
+
+
+输入样例
+
+-100 -100 -100 -99
+
+
+输出样例
+
+none
+
+
+提示
+
+Here is another sample:
+Input:  -5 5 5 5
+Output:  0 5 5 5

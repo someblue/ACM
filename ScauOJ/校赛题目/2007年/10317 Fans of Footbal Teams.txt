@@ -1,0 +1,54 @@
+10317 Fans of Footbal Teams
+
+时间限制:1000MS  内存限制:65535K
+提交次数:0 通过次数:0
+
+题型: 编程题   语言: 无限制
+Description
+
+Two famous football teams, named AC Milan(AC米兰) and Inter Milan(国际米兰) will have a match in GuangZhou City, which is 
+exciting. So a lot of fans get together to watch the wonderful match. This trouble the local polices. In order to avoid a 
+chaos caused by fans of the two teams, the police office in GuangZhou City decides to arrange the seats of the gymnasium(体育馆) 
+during the match. All fans of AC Milan seat Noth, while all fans of Inter Milan seat South . However, the police first needs 
+to identify which team a fan support. The present question is, given two fans; do they support a same team? You must give 
+your judgment based on incomplete information. 
+
+Assume N (N <= 10^5) fans are currently in GuangZhou City, numbered from 1 to N. You will be given M (M <= 10^5) messages 
+in sequence, which are in the following two kinds: 
+
+1. D [a] [b] 
+where [a] and [b] are the numbers of two fans, and they support different teams. 
+
+2. A [a] [b] 
+where [a] and [b] are the numbers of two fans. This requires you to decide whether a and b support a same team. 
+
+
+
+输入格式
+
+The first line of the input contains a single integer T (1 <= T <= 20), the number of test cases. Then T cases follow. 
+Each test case begins with a line with two integers N and M, followed by M lines each containing one message as described above. 
+
+
+输出格式
+
+For each message "A [a] [b]" in each case, your program should give the judgment based on the information got before. 
+The answers might be one of "Support the same team.", "Support different teams." and "Not sure yet."
+
+
+输入样例
+
+1
+5 5
+A 1 2
+D 1 2
+A 1 2
+D 2 4
+A 1 4
+
+
+输出样例
+
+Not sure yet.
+Support different teams.
+Support the same team.

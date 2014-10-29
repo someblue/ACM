@@ -1,0 +1,40 @@
+8653 Collision Detection
+
+时间限制:500MS  内存限制:65535K
+提交次数:80 通过次数:45
+
+题型: 编程题   语言: 无限制
+Description
+
+Collision detection(碰撞检测) algorithms are a basic component of 3D and 2D video games. Here is a problem about Collision detection.
+
+There are two tanks in the world. I want you to detect if one tank has hit another.
+
+Assume tanks are 1x1 rectangles in the Cartesian axis and four corners are located on integral point. Now give you every tank’s left-top corner coordinate(x, y), please tell me the collision detection result.
+
+
+
+
+输入格式
+
+The input contains four integers x1, y1, x2, y2.
+
+
+
+输出格式
+
+If they touch each other, Output “collision”,
+
+If they overlap, Output “error“otherwise output “normal”
+
+
+
+输入样例
+
+2 2 3 3
+
+
+输出样例
+
+collision
+

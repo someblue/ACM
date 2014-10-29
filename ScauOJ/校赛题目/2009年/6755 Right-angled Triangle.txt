@@ -1,0 +1,43 @@
+6755 Right-angled Triangle
+
+时间限制:612MS  内存限制:1000K
+提交次数:52 通过次数:11
+
+题型: 编程题   语言: 无限制
+Description
+
+Right-angled triangle is very important in plane geometry, just as the primes in numeral system. Now there is an interesting problem about right-angled triangle. As we all know, if we choose three points in a coordinate system and these points according to some conditions, they can form a right-angled triangle. And there is an example in the picture: the △OPQ forms a right-angled triangle.
+
+缺少图片
+If give a integer n, there are many ways to choose two points that according three condition： 1) each co-ordinate is integer 2) lies between 0 and n inclusive, that is 0 <= x1, y1, x2, y2 <= n, 3) the two points and the origin point can form a right-angled triangle. And the following picture is one example which n = 2, and it shows that there are 14 different ways to choose two points to forms a right-angled triangle with origin point
+
+缺少图片
+And this is the problem, give you a integer n, you should calculate how many ways to choose two different points, both satisfy the three conditions above. 
+
+
+输入格式
+
+The first line of input is an integer m（2<= m <= 20）, which specifies the number of case to follow. Each case per line, contains only one integer n(2 <= n <= 50).
+
+
+输出格式
+
+Per case output an integer, which is the way to choose those two points and per case one line.
+
+
+输入样例
+
+2
+2
+3
+
+
+输出样例
+
+14
+33
+
+
+来源
+
+By Hanqiu 

@@ -1,0 +1,13 @@
+3 5 9
+ateam
+bteam
+ate
+submit ateam 35 A OTHER
+submit ate 35 A OTHER
+submit bteam 70 A AC
+submit ateam 50 A AC
+submit ate 50 A AC
+submit bteam 100 D AC
+submit bteam 101 E AC
+submit bteam 200 D AC
+show

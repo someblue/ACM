@@ -1,0 +1,62 @@
+10329  recruit
+
+时间限制:500MS  内存限制:65535K
+提交次数:3 通过次数:1
+
+题型: 编程题   语言: 无限制
+Description
+
+Mr. Liu is a famous computer science professor. One day he was prepared to go to some well-known universities to recruit（招募） 
+PHD candidate（博士研究生）, and he selected for this particular recruitment from lots of good universities.
+
+
+
+
+It provides that: 
+(1) Professor Liu can move from university A to B if there is an edge from A to B.
+
+(2) Professor Liu stays at a university just one day. At evening he must left the university in order to arrive in another university 
+next morning. 
+
+(3) Professor Liu can arrive in a university many times. Professor Liu begins his travel from university A (stay a day) and hope 
+arrive at university B in the X-th day. To find a suitable route, of course, the first problem is to answer the total number of 
+route between A and B. 
+
+
+
+输入格式
+
+The first line contains  three 
+integers n, m, X (1 <= n, X <= 100), respectively, express the total number of universities, the number of route connectivity, 
+as well as how many days would be required to reach the University of B from A. 
+Then there is m lines, each line a pair of integers x, y (1 <= x, y <= n), means Professor Liu can be from university x to y 
+directly. (Note: 所有边都是有向边)
+The next line contains an integer q (1 <= q <= 100), then you should work out q answers. Then Q line follows, each line has 
+two integers A and B (1 <= A, B <= n), namely A, B University. 
+
+
+输出格式
+
+Output file contains q lines, and each line has an integer t, for the demand for the total route number from University A to B 
+to meet the above requirements. Input data for solving the problem is the total number of lines does not exceed the scope of a 
+long integer, that is, t <2 ^ 31.
+
+
+输入样例
+
+1
+4 5 6
+1 2
+2 3
+3 4
+4 1
+2 4
+2
+1 4
+4 2
+
+
+输出样例
+
+2
+1

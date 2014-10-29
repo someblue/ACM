@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1395072753 source:e:\information\c program\scauoj\flesh competition\2008\the road of acmer 2\main.cpp
+	<iostream>
+	<cstring>
+	<cstdio>
+	<algorithm>
+

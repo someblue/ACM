@@ -1,0 +1,51 @@
+8655 Ping-pong Ball
+
+时间限制:500MS  内存限制:65535K
+提交次数:142 通过次数:24
+
+题型: 编程题   语言: 无限制
+Description
+
+The Chairman of Table Tennis Federation (ITTF) is Mr. Black. When he is taking office, he began to implement a series of reforms in order to promote the popularity of this sport. Among them, 11 points scoring system(11分制) has aroused considerable controversy(争论). Because they cannot adapt to the new rules, many players can only choose to retire(退役). Mr. White is one of them. After he retired and embarked on a research table tennis. First of all, he intended to find out the different effects on the players with 11 points scoring system and 21 points scoring system. So he needed to make some analysis of multi-year data from a number of games statistics.
+
+The way Mr. White analyzing is as followed. First, make a list for the outcome of the game ball for each. Then, calculate both results of the competition under the 11 points scoring system and 21 points scoring system, respectively.
+
+For example, now has such a record, where “W” means White has got a score, and “L” means his opponent has done.
+
+WWWWWWWWWWWWWWWWWWWWWWLW
+
+Under 11 points scoring system, the competition result is that White won the first game 11 to 0, the same to the second game, and being the third game, the current score is 1 to 1. But under 21 points scoring system, the result is that White won the first game 21 to 0, and being the second game, the current score is 2 to 1. If a game has just begun, then the time the score is 0 to 0.
+
+Your program should output the correct results for the input information (in the forms of “W” and “L”) about the competition.
+
+You should notice that you are considering win when you have at least 2 point more than your opponent.
+
+
+
+
+输入格式
+
+Every input file includes a few lines of characters (at most 20 characters in a line). The string consists of the capital of “W”, “L” and “E”. Where, “E” means the end of the game’s information. Your program should ignore everything after “E”.
+
+
+
+输出格式
+
+The output consists of two parts. Every part has a few lines, and each line corresponds to a game score (The output order is in according to the input). Where, the first part is the result with 11 points scoring system, the second part is for 21 points scoring system. And there is a line between the two parts.
+
+
+
+输入样例
+
+WWWWWWWWWWWWWWWWWWWW
+WWLWE
+
+
+输出样例
+
+11:0
+11:0
+1:1
+
+21:0
+2:1

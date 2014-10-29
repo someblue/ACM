@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1381835738 source:e:\information\c program\scauoj\program design\file\complex\main.c
+	<stdio.h>
+	<math.h>
+	<string.h>
+	<stdlib.h>
+

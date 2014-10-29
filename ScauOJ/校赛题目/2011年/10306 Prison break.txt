@@ -1,0 +1,69 @@
+10306 Prison break
+
+该题有题解
+
+时间限制:1000MS  内存限制:65535K
+提交次数:17 通过次数:4
+
+题型: 编程题   语言: 无限制
+Description
+
+Mike was going to escape from the prison when he knew how to do it. However, many other people realized his secret and asked him for help. But, 
+to avoid being caught by guards, Mike could only take one people with him. By thinking for a minute, an idea came out in his mind to choose one 
+from all the people who wanted to break the prison:
+Let all the n people (assuming they are numbered from 0 to n-1) gather together in a circle and play a game, the one who wins in the end might 
+have a chance to escape with Mike.
+Here is the rule of the game: 
+Select two people adjacent to each other in the circle randomly, and then they might fight between each other. The loser in the fight has to quit 
+the game and the winner can stay. Repeat this step until there is only one person left and this person can go with Mike.  
+As Mike was a clever man (even though not so careful for letting others know his plan), he knew exactly who will win between i and j before the 
+two people fight each other, and he draw a n*n matrix G in which G(i,j)=1 means i can win j during the game, while G(i,j)=0 in opposite. And now, 
+Mike would like to know the list of the people who cannot escape with him no matter in which order the fights are arranged, can you help him?
+
+
+
+输入格式
+
+The first line of the input is an integer T indicating the number of the case, and in each case, the first line of the case is an integer n 
+indicating the number of people. Then a n*n matrix G follows whose meaning has been shown above. (1 <= n <= 100)
+
+
+输出格式
+
+You should output the numbers of the people who might not have a chance to escape in any situations. These numbers should be printed out in 
+ascending order and there is only one number in each line. If everyone might have a chance to escape, print out “none” instead. 
+
+
+输入样例
+
+2
+4
+0 0 0 0
+1 0 0 0
+1 1 0 0
+1 1 1 0
+4
+0 0 0 1
+1 0 1 0
+1 0 0 1
+0 1 0 0
+
+
+输出样例
+
+0
+1
+2
+none
+
+
+提示
+
+4
+0 0 0 1
+1 0 1 0
+1 0 0 1
+0 1 0 0
+Let us see this sample: 
+Since 0 can beat 3, 3 beats 1 and 1 beats 2, so 0 can win the game to escape. It is also easy to find that prisoner 1, 2, 3 might have the chance to win the game. So the output is “none”.
+

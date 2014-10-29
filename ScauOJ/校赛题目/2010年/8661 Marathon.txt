@@ -1,0 +1,78 @@
+8661 Marathon
+
+该题有题解
+
+时间限制:1449MS  内存限制:65535K
+提交次数:25 通过次数:14
+
+题型: 编程题   语言: 无限制
+Description
+
+M Marathon is a long distance foot race with an official distance of 42.195km, which is usually run as a road race. Since the distance is too long, so several “Service Spot” will be setup to provide water and goods for athletes, so that to help the athletes complete their race. However, the Asia Compete Machinery (ACM) needs your help to determine how to setup the Service Spots in the Asia Game wisely.
+
+ 
+
+1We hold Guangzhou is a bi-directed graph, composed by N vertexes and M edges (all edges are 2-way edges, vertexes and edges are numbered from 1). The race route is begin and end at NO.1 vertex, and composed by several adjacent edges. ACM want to setup K Service Spots on the vertex of the given route. The distance between NO.1 vertex and Service Spot is called as “Service Distance”. In order to make the transport easier, ACM want to minimize the summation of K Service Distance (Total Service Distance, TSD). Now, please write a program to calculate the minimum TSD.
+
+ 
+
+In this picture, ACM wants to setup 3 Service Spots. So vertexes #3, #5 and #2 are the best choices, since their Service Distance are 4, 5 and 7. Thus, the correct minimum TSD is 16. Please notice that ACM can use the race route to transport. All data are solvable and not exceed 32-bit integer.
+
+
+
+
+输入格式
+
+The first line of input is an integer T (T <= 10), indicate the number of test cases.
+
+Each test case contains two parts.
+
+The first line of the first part contains three integers, N, M, K (3 <= N <= 1000, 3 <= M <= N*(N-1)/2, 0 <= K <= N). Then M lines follow. Each line contains three integers U, V, W, (U, V) indicate there is an edge between vertexes U and V; W indicate the distance between U and V.
+
+The first line of the second part contains one integer R (1 <= R <= N+1), indicate the number of vertexes in the race route. The second line contains R integers; indicate the vertexes in the race route. The adjacent integers mean they are adjacent in the race route.
+
+There is a blank line between two cases.
+
+
+
+输出格式
+
+Each test case output one line contains one integer, the TSD which mention above.
+
+
+
+输入样例
+
+2
+8 13 3
+1 2 7
+1 7 1
+2 7 9
+2 3 5
+1 6 8
+6 7 8
+5 6 5
+7 8 1
+3 8 2
+8 5 3
+8 4 13
+3 4 8
+4 5 6
+7
+1 2 3 4 5 6 1
+
+5 5 3
+1 2 1
+2 3 2
+3 4 3
+4 5 5
+5 1 7
+6
+1 2 3 4 5 1
+
+
+输出样例
+
+16
+10
+

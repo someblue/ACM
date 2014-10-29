@@ -1,0 +1,41 @@
+10314 The Least Distance
+
+时间限制:1000MS  内存限制:65535K
+提交次数:83 通过次数:39
+
+题型: 编程题   语言: 无限制
+Description
+
+Mr. Jeff likes swimming. But in the swimming pool he always swims from a corner to the counter corner in the way as the figure shows, i.e. he swims to the other side and back, then go to the other side corner.
+
+
+
+The problem is coming: what is the least distance Mr. Jeff has to swim?
+
+
+
+输入格式
+
+There are several test cases, each case occupies one line. For each line, there are two positive integers, the length and width of the swimming pool. The length and width are between 1 and 9999, inclusively. 
+Input is ended with length and width equal 0.
+
+
+输出格式
+
+Output each least distance in a single line, round the result to the float that has one bit decimal, e.g. 1.33 rounds to 1.3, 1.85 rounds to 1.9, 123.456 rounds to 123.5..
+
+
+输入样例
+
+1 1
+1 2
+2 1
+0 0
+
+
+输出样例
+
+3.2
+6.1
+3.6
+

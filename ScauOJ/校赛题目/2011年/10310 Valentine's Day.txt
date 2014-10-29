@@ -1,0 +1,60 @@
+10310 Valentine's Day
+
+该题有题解
+
+时间限制:1000MS  内存限制:65535K
+提交次数:92 通过次数:27
+
+题型: 编程题   语言: 无限制
+Description
+
+February 14th every year is the Western Valentine's Day. Valentine's Day is called “qingrenjie” in China, on this day 
+lovers give each other chocolates, cards and roses to express their love or friendship.
+Qiu is a boy from Jiangmen, on February 14th he is going to visit a friend Jun, Jun is a girl who loves roses very much.
+ In order to keep up with trends, Qiu want to give Jun a branch of flower as gift. For this special day and special meaning,
+ the number of roses of any branch should be an integer which consist of several 9s, such as 9, 99, 999… (at most nine 9s). 
+After Qiu's research, there are many ways from his home to Jun's home, but there is a limit in every road, that is to say 
+if you take too many roses (more than the limit), you can't go through this load. Furthermore, roses are very expensive (9.9$ each (>_<)), 
+so Qiu did not want to throw any roses away.
+In order to please Jun, Qiu ask you a clever acmer to help him, calculate that how many roses he can send most from his house 
+to Jun's house through these roads?
+
+
+
+输入格式
+
+The first line is a number T, then T-case below.
+In every case there are two number N,M in the first line.(2 <= N <= 1000, 1 <= M <= 50000) express there has N point 
+in the map,(Qiu is always No.1,Jun is always No.N), and there are M undirected roads in the map.
+After that, there are M lines, each line there are 3 numbers (u,v,w),express that there is an undirected road 
+between u and v, and the road's limit is w.(it means if you have x roses, then (x <= w) you can go through this road).
+
+
+输出格式
+
+Output how many roses Qiu can send most to Jun.
+
+
+输入样例
+
+2
+3 2
+1 2 999
+2 3 99
+3 3
+1 2 999
+2 3 99
+3 1 9999
+
+
+输出样例
+
+99
+9999
+
+
+提示
+
+1．Be in sure that there have a way from 1 to N.
+2．Have great data entry questions, please use scanf to read data.
+3．There is only one road between u and v.

@@ -1,0 +1,47 @@
+6758 Logic
+
+时间限制:500MS  内存限制:1000K
+提交次数:85 通过次数:3
+
+题型: 编程题   语言: 无限制
+Description
+
+Mary is a freshmen, this semester she had an elective course Discrete Mathematics. Her teacher, Miss Lin gave her an after-school problem. Poor Mary spent a long,
+ long time on it and did not make it out. The deadline is coming up. She is very anxious, and hoped a programming expert who can do her a favor, tell an approach to solve it.
+The problem is as follows:
+
+Given several formula（公式） like “variable1 relation variable2”, where relation may be <, ==, !=, >, variables may contain up to 10 letters or digits and are case-sensitive.
+ Please determine whether there is a conflict.
+
+
+
+输入格式
+
+There are several cases. Each case begins with a line “Case%d:”, (%d is the case number), and the followed lines contains several formulas, one per line. There are no more than 100 formulas
+ for each case. Please see sample input for more details. Process until meet EOF of file
+
+
+输出格式
+
+If there is no conflict, output “Ac”, otherwise, output “Wa”. Please refer to sample output for the exact output format.
+
+
+输入样例
+
+2
+xyz < 123
+123 < 45
+2
+x < y
+y < x
+
+
+输出样例
+
+Case1:Ac
+Case2:Wa
+
+
+来源
+
+By ZhuKai 

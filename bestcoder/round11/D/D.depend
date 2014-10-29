@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1411906001 source:e:\workspace\acm\bestcoder\round11\d\main.cpp
+	<iostream>
+	<cstdio>
+	<cstring>
+	<algorithm>
+

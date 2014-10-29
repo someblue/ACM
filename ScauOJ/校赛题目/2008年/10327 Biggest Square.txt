@@ -1,0 +1,37 @@
+10327 Biggest Square
+
+时间限制:1000MS  内存限制:65535K
+提交次数:0 通过次数:0
+
+题型: 编程题   语言: 无限制
+Description
+
+You are given a M*M cloth with some holes on it. Your task is to find a biggest square cloth from it. The following is an example(M=5)
+
+
+
+
+输入格式
+
+The first line contains the one integer number M (1<= M<=1,000). Then M lines are following. Each line contains M 
+charactors which “.” means cloth and “H” means hole.
+
+
+输出格式
+
+The only line of the output contains area of the biggest square cloth mentioned above.
+
+
+输入样例
+
+5
+H...H
+.....
+.....
+.HHH.
+.....
+
+
+输出样例
+
+9

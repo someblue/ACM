@@ -1,0 +1,37 @@
+10326 Paper cutting
+
+时间限制:1000MS  内存限制:65535K
+提交次数:1 通过次数:0
+
+题型: 编程题   语言: 无限制
+Description
+
+You are now given a large sheet of paper, which is in rectangle shape. Now you are asked to cut another rectangle from the 
+given paper. Your task is to decide whether is it possible to cut the rectangle from the given paper.
+
+
+
+输入格式
+
+The input consists of T test cases. The number of them (T) is given on the first line of the input file. Each test case 
+consists of a single line. The line contains exactly four integer numbers separated by spaces: A, B, X and Y. A and B 
+indicate the dimensions of the given paper, X and Y are the dimensions of the requested rectangle (1 <= A,B,X,Y <= 50000). 
+
+
+输出格式
+
+Your task is to determine whether it is possible to cut the rectangle from the given paper. If so, you are to print one 
+line with the sentence "Cutting is possible." Otherwise print the sentence " Cutting is impossible ". 
+
+
+输入样例
+
+2
+10 10 8 8
+8 8 10 10
+
+
+输出样例
+
+Cutting is possible.
+Cutting is impossible.

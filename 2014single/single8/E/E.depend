@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1414132000 source:e:\workspace\acm\2014single\single8\e\main.cpp
+	<iostream>
+	<cstdio>
+	<cstring>
+	<algorithm>
+

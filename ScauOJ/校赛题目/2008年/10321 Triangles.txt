@@ -1,0 +1,45 @@
+10321 Triangles
+
+时间限制:1000MS  内存限制:65535K
+提交次数:0 通过次数:0
+
+题型: 编程题   语言: 无限制
+Description
+
+There are given n isosceles right triangles on a plane. Each triangle can be described by three integers x,y,m (m>0). 
+Vertices of such a triangle are points which have coordinates (x;y), (x+m;y) and (x; y+m).
+Write a program which calculates the total area covered by triangles.
+
+
+
+输入格式
+
+The first line of the input file tr.in contains one positive integer n (n<=2000), the number of triangles on a plane.
+The next n lines of the file describe the triangles, one triangle per line. Each line contains three integers xi, yi and mi,
+ separated by single spaces (1<=i<= n,  -10^7<=xi<=10^7,  -10^7<=yi<=10^7, 0 < mi <= 1000).
+
+
+输出格式
+
+On the first line of the file tr.out one number with exactly one digit after decimal point must be written – the total area 
+covered by triangles.
+
+
+输入样例
+
+5
+-5 -3 6
+-1 -2 3
+0 0 2
+-2 2 1
+-4 -1 2
+
+
+输出样例
+
+24.5
+
+
+提示
+
+(图片要上网看）

@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1394083501 source:e:\information\c program\scauoj\data structure\สตั้2\8588\main.cpp
+	<malloc.h>
+	<stdio.h>
+	<ctype.h>
+	<string.h>
+
