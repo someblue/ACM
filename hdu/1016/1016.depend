@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1407139512 source:e:\information\c program\oj\hdu\1016\main.cpp
+	<iostream>
+	<cstdio>
+	<cstring>
+

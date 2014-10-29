@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1395206013 source:e:\information\c program\oj\poj\2299\main.cpp
+	<iostream>
+	<vector>
+	<cstring>
+	<algorithm>
+

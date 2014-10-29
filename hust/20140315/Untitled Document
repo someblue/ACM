@@ -1,0 +1,33 @@
+#include <iostream>
+#include <cstdio>
+#include <cstring>
+#include <vector>
+#include <utility>
+#include <map>
+#define VI vector<int>
+#define N 
+using namespace std;
+typedef long long ll;
+
+void run()
+{
+    int _,cas=1;
+    scanf("%d",&_);
+    while(_--)
+    {
+
+    }
+}
+
+int main()
+{
+    freopen("in","r",stdin);
+    run();
+    return 0;
+}
+
+
+printf("Case %d: ",cas++);
+
+
+http://acm.hust.edu.cn/vjudge/contest/view.action?cid=42145#overview

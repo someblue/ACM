@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1405773596 source:e:\information\c program\oj\acdream\1055\main.cpp
+	<iostream>
+	<cstdio>
+	<cstring>
+	<algorithm>
+	<cctype>
+

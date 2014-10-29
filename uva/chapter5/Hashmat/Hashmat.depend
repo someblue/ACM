@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1383575595 source:e:\information\c program\uvaoj\chapter5\hashmat\main.cpp
+	<iostream>
+	<cstdio>
+	<cmath>
+

@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1409400125 source:e:\information\c program\oj\bnu\team15\h\main.cpp
+	<iostream>
+	<cstdio>
+	<cstring>
+	<algorithm>
+	<cmath>
+	<utility>
+

@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1408411511 source:e:\information\c program\oj\hust\segment_tree\g\main.cpp
+	<iostream>
+	<cstdio>
+	<cstring>
+	<algorithm>
+	<cmath>
+	<vector>
+	<map>
+	<utility>
+	<queue>
+	<stack>
+

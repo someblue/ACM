@@ -1,0 +1,30 @@
+#include <iostream>
+#include <cstdio>
+#include <cstring>
+#include <algorithm>
+#include <cmath>
+#include <map>
+#include <vector>
+#define VI vector<int>
+#define N 
+typedef long long ll;
+using namespace std;
+void run()
+{
+    int _,cas=1;
+}
+
+int main()
+{
+    freopen("in","r",stdin);
+    run();
+    return 0;
+}
+
+printf("Case %d: ",cas++);
+
+xterm -T $TITLE -e
+
+
+http://acm.hust.edu.cn/vjudge/contest/view.action?cid=42229#overview
+

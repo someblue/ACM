@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1407583156 source:e:\information\c program\oj\hust\single10\a2\main.cpp
+	<iostream>
+	<stdio.h>
+	<string.h>
+	<math.h>
+	<algorithm>
+

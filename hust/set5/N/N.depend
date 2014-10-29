@@ -1,0 +1,15 @@
+# depslib dependency file v1.0
+1409278330 source:e:\information\c program\oj\hust\set5\n\in.c
+
+1409280470 source:e:\information\c program\oj\hust\set5\n\main.cpp
+	<iostream>
+	<cstdio>
+	<cstring>
+	<algorithm>
+	<cmath>
+	<vector>
+	<map>
+	<utility>
+	<queue>
+	<stack>
+

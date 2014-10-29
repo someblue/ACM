@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1407217571 source:e:\information\c program\oj\hust\set17\b\main.cpp
+	<iostream>
+	<cstdio>
+	<cstring>
+	<stack>
+

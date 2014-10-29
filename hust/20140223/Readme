@@ -1,0 +1,19 @@
+SCAUACM机房虚拟机使用说明：
+1、本帐号在每次虚拟机启动时都会回复备份状态，所以请不要把重要文件放在这里，以免丢失。WIN7下的D盘是不会自动还原的，但是请尽量不要放东西在电脑上，如果发现有作弊迹象，严查！
+2、如果想要使用中文输入法，请打开Launcher，搜索“ibus”（不含引号），点开后panel会增加一个键盘标志，右击选择Chinese-Pinyin即可。若没有，则打开preferences，之后打开Input Method标签，选择Chinese-Pinyin添加即可。
+3、chrome中安装了proxy-switchsharp，若需要用代理，请用这个。
+4、若想要在虚拟机中使用windows下的文件，或者是U盘中的文件，请挂在共享设备D_Drive。
+	D_DRIVE为虚拟机中设置的一个虚拟设备，其目标指向HOST系统WIN7下的D盘。
+	挂载的方法为：
+		I   / 在用户主目录下新建一个名为“share”的目录（不含引号）。
+		II  / 在终端下打开用户目录，然后运行
+			sudo mount -t vboxsf D_DRIVE ./share
+		      然后输入帐号的密码
+		III / 如果没有任何提示，则说明已经成功挂载，请把你想要用的文件放在WIN7下的D盘，然后进来虚拟机打开share文件夹复制使用。如果提示Protocol Error，不用疑问，是你RP问题，你可以尝试关闭虚拟机重新打开再次挂载。
+		IV  / 如要关闭挂载，运行
+			sudo umount ./share
+5、虚拟机中/home/READONLY目录中有部分可能需要的工具和软件，如要使用，请复制出来解包使用。其中，运行GoAgent需要的包已经安装完成，如要使用，只需要遵循
+	https://code.google.com/p/goagent/wiki/GoAgent_Linux
+中描述的“上传”之后的设置。（如果不会用的话请回去再试，不要在这里浪费时间）
+这部分的软件会定期更新，如有需要，可联系LRC进行添加。
+6、此使用说明以后还会添加相应项目，最后愿大家切题愉快。

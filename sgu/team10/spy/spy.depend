@@ -1,0 +1,11 @@
+# depslib dependency file v1.0
+1408967747 source:e:\information\c program\oj\sgu\team10\spy\main.cpp
+	<iostream>
+	<cstdio>
+	<cstring>
+	<algorithm>
+	<cmath>
+	<utility>
+	<vector>
+	<queue>
+

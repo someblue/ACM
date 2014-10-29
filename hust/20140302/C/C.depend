@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1393743505 source:/home/acmer/Desktop/C/main.cpp
+	<iostream>
+	<cstdio>
+	<cstring>
+	<algorithm>
+	<cmath>
+

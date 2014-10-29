@@ -1,0 +1,38 @@
+#include <iostream>
+#include <cstdio>
+#include <cstring>
+#include <algorithm>
+
+using namespace std;
+
+long long gcd(long long a,long long b)
+{
+    return b==0?a:gcd(b,a%b);
+}
+
+long long lcm(long long a,long long b)
+{
+    return a/gcd(a,b)*b;
+}
+
+int main()
+{
+    //freopen("in","r",stdin);
+    long long a,b,l,c,d,cc;
+    int t;
+    scanf("%d",&t);
+    while(t--)
+    {
+        scanf("%I64d%I64d%I64d",&a,&b,&l);
+        d=lcm(a,b);
+        c=lcm(d,l)/d; cc=c;
+        //printf("lcm(%lld,%lld)=%lld\n",a,b,d);
+        while(1)
+        {
+            if(lcm(d,c)>l) {printf("impossible\n");break;}
+            else if(lcm(d,c)==l) {printf("%I64d\n",c);break;}
+            c+=cc;
+        }
+    }
+    return 0;
+}

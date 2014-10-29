@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1403075211 source:e:\information\c program\oj\hduoj\1087\main.cpp
+	<iostream>
+	<cstdio>
+	<cstring>
+	<algorithm>
+	<cmath>
+	<vector>
+	<map>
+	<utility>
+	<queue>
+	<stack>
+

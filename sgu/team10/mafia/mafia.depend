@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1409072720 source:e:\information\c program\oj\sgu\team10\mafia\main.cpp
+	<iostream>
+	<cstdio>
+	<memory.h>
+

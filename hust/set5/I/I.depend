@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1406052926 source:e:\information\c program\oj\hustoj\set5\i\main.cpp
+	<iostream>
+	<cstdio>
+	<cstring>
+	<algorithm>
+

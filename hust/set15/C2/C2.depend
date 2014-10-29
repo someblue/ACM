@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1407052269 source:e:\information\c program\oj\hust\set15\c2\main.cpp
+	<iostream>
+	<cstdio>
+	<cstring>
+	<queue>
+
