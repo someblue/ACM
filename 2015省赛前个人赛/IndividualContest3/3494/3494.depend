@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1425318975 source:e:\workspace\acm\2015省赛前个人赛\individualcontest3\3494\main.cpp
+	<iostream>
+	<cstdio>
+	<cstring>
+	<algorithm>
+	<cmath>
+	<vector>
+	<set>
+	<map>
+	<queue>
+	<stack>
+

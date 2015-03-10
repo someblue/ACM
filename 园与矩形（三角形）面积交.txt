@@ -1,0 +1,138 @@
+#include <cstdio>
+#include <algorithm>
+#include <cmath>
+
+using namespace std;
+
+struct point{
+	long double x, y;
+	void input(){
+	    double tx, ty;
+	    scanf("%lf%lf", &tx, &ty);
+	    x = tx, y = ty;
+    }
+	point operator - (const point& p0){
+	    return point(x - p0.x, y - p0.y);
+	}
+	point(long double x_ = 0, long double y_ = 0){
+		x = x_, y = y_;
+	}
+}p[8], tp[3], origin;
+
+const long double eps = 1e-8;
+long double r, area;
+int n;
+
+long double cross(point p1, point p2, point p3){
+	return (p2.x-p1.x) * (p3.y-p1.y) - (p3.x-p1.x)*(p2.y-p1.y);
+}
+
+long double dot(point p1, point p2){
+	return p1.x*p2.x + p1.y*p2.y;
+}
+
+long double dis(point p1, point p2){
+	return sqrt((p1.x-p2.x)*(p1.x-p2.x) + (p1.y-p2.y)*(p1.y-p2.y));
+}
+
+point get_intersect(){
+	point temp = point(tp[0].x-tp[1].x, tp[0].y-tp[1].y);
+	point vec = point(temp.y, -temp.x);
+	point origin2 = point(origin.x+vec.x, origin.y+vec.y);
+	long double a1 = tp[0].y - tp[1].y;
+	long double b1 = tp[1].x - tp[0].x;
+	long double c1 = (tp[0].x * tp[1].y - tp[1].x * tp[0].y);
+	long double a2 = origin.y - origin2.y;
+	long double b2 = origin2.x - origin.x;
+	long double c2 = (origin.x * origin2.y - origin2.x * origin.y);
+	long double tmd = a1 * b2 - a2 * b1;
+	return point((b1*c2 - b2*c1)/tmd, (a2*c1 - a1*c2)/tmd);
+}
+
+int on_line(point p0, point p1, point p2){
+	if(p0.x > max(p1.x, p2.x)) return 0;
+	if(p0.x < min(p1.x, p2.x)) return 0;
+	if(p0.y > max(p1.y, p2.y)) return 0;
+	if(p0.y < min(p1.y, p2.y)) return 0;
+	return 1;
+}
+
+long double get_area(){
+	long double len0 = dis(origin, tp[0]);
+	long double len1 = dis(origin, tp[1]);
+	long double angle = acos(dot(tp[0], tp[1])/len0/len1);
+	point inter = get_intersect();
+	long double disinter = dis(inter, origin);
+	long double sgn = cross(origin, tp[0], tp[1]) < 0? -1 : 1;
+	long double res = 0;
+
+	if(angle < eps || fabs(cross(origin, tp[0], tp[1])) < eps) return 0;
+	else if(len0 < r + eps && len1 < r + eps){
+		res = fabs(cross(origin, tp[0], tp[1]))/ 2.0;
+	}
+	else if(len0 < r - eps || len1 < r - eps){
+		if(len1 < r - eps){
+			swap(tp[0], tp[1]);
+			swap(len0, len1);
+		}
+		long double dis01 = dis(tp[0], tp[1]);
+		point mov = point((tp[1].x-tp[0].x)/dis01, (tp[1].y-tp[0].y)/dis01);
+		long double len = sqrt(r*r - disinter*disinter);
+		point interpoint;
+		interpoint = point(inter.x+mov.x*len, inter.y+mov.y*len);
+		long double angle0 = acos(dot(tp[1], interpoint)/len1/r);
+		res = r*r*angle0/2.0;
+		res += fabs(cross(origin, interpoint, tp[0]))/2.0;
+	}
+	else{
+		int flag = on_line(inter, tp[0], tp[1]);
+		res = r*r*angle/2.0;
+		if(flag && disinter < r){
+			long double tangle = 2 * acos(disinter/r);
+			res -= r*r*tangle/2.0;
+			res += r*disinter*sin(tangle/2.0);
+		}
+	}
+
+	return res*sgn;
+}
+
+void solve(){
+    area = 0;
+    for(int i = 1; i <= n; i++){
+        tp[0] = p[i], tp[1] = p[i+1];
+        area += get_area();
+    }
+}
+
+int main(){
+    int cou = 0;
+    double ox, oy, rr;
+
+    while(scanf("%lf%lf%lf", &ox, &oy, &rr) > 0){
+        origin.x = ox;
+        origin.y = oy;
+        r = rr;
+        if(cou) printf("\n");
+        else cou++;
+        p[1].input();
+        p[3].input();
+        if(p[1].x > p[3].x){
+            swap(p[1].x, p[3].x);
+            swap(p[1].y, p[3].y);
+        }
+        p[2] = point(p[3].x, p[1].y);
+        p[4] = point(p[1].x, p[3].y);
+        n = 4;
+        p[n+1] = p[1];
+        for(int i = 1; i <= n+1; i++){
+            p[i].x -= origin.x;
+            p[i].y -= origin.y;
+        }
+        origin.x = origin.y = 0;
+        solve();
+        printf("%.9f\n", (double)fabs(area));
+    }
+
+	return 0;
+}
